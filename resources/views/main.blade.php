@@ -8,6 +8,13 @@
   @vite('resources/css/app.css')
 </head>
 <body>
-  @yield('content')
+  <div>
+    @if(!Request::is('login', 'register', 'member')) 
+      @include('partials.navbar')
+    @endif
+  </div>
+  <div class="mx-24">
+    @yield('content')
+  </div>
 </body>
 </html>
