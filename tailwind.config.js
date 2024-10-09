@@ -8,10 +8,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#12B28C', // tambahkan warna primary sesuai kebutuhan Anda
+        primary: '#12B28C', 
+        secondary: '#307B74',
+        tertiary: '#D1F16A',
       },
     },
   },
-  plugins: [],
+  plugins: [
+    // require('@tailwindcss/line-clamp'),
+  ],
 }
 

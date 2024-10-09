@@ -23,7 +23,8 @@
 
             </div>
             <div>
-                <img src="img/login.png" alt="" width="550" height="500">
+                <img src="img/login.png" alt="" width="650" height="650">
             </div>
         </div>
     </div>
+@endsection
