@@ -13,3 +13,4 @@ Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
 Route::get('/member', [MemberController::class, 'index']);
 Route::get('/produk', [ProdukController::class, 'index']);
+Route::get('/detail_produk', [ProdukController::class, 'detail']);

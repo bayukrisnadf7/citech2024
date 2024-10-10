@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <div class="flex gap-10">
+    <div class="flex gap-8 mt-5">
         <div class="w-1/5 border rounded-lg p-5 max-h-max">
             <p class="text-2xl">Filtering</p>
             <p class="font-bold mt-8">Tipe Produk</p>
@@ -69,25 +69,27 @@
             </div>
             <div class="grid grid-cols-4 gap-10">
                 <div class="mt-5">
-                    <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
-                        <img src="img/produk.png" alt="">
-                        <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
-                        <p class="font-bold text-xl">Rp. 220.000,00</p>
-                        <div class="flex text-xs gap-3 mt-2 items-center">
-                            <p class="bg-tertiary p-1 w-24 text-center font-bold rounded-full">Produk Jadi</p>
-                            <p>Stok: 12 Produk</p>
-                        </div>
-                        <div class="flex items-center gap-2 mt-2 text-xs">
-                            <div class="flex justify-center items-center gap-1">
-                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                <p>4.9</p>
+                    <a href="/detail_produk">
+                        <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
+                            <img src="img/produk.png" alt="">
+                            <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
+                            <p class="font-bold text-xl">Rp. 220.000,00</p>
+                            <div class="flex text-xs gap-3 mt-2 items-center">
+                                <p class="bg-tertiary p-1 w-24 text-center font-bold rounded-full">Produk Jadi</p>
+                                <p>Stok: 12 Produk</p>
                             </div>
-                            <div class="flex justify-center items-center gap-1">
-                                <p>|</p>
-                                <p>100+ Terjual</p>
+                            <div class="flex items-center gap-2 mt-2 text-xs">
+                                <div class="flex justify-center items-center gap-1">
+                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                    <p>4.9</p>
+                                </div>
+                                <div class="flex justify-center items-center gap-1">
+                                    <p>|</p>
+                                    <p>100+ Terjual</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="mt-5">
                     <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
@@ -152,7 +154,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
+                {{-- <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
                     <img src="img/produk.png" alt="">
                     <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
                     <p class="font-bold text-xl">Rp. 220.000,00</p>
@@ -227,7 +229,7 @@
                             <p>100+ Terjual</p>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
 
         </div>
