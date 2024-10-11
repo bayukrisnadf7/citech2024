@@ -8,6 +8,8 @@ class MemberController extends Controller
 {
     public function index()
     {
-        return view('member.index');
+        return view('member.index')->with([
+            'title' => 'Member | RevoEnergy.',
+        ]);
     }
 }

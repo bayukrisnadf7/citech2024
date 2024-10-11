@@ -10,6 +10,8 @@ class ProdukController extends Controller
         return view('produk.index');
     }
     public function detail(){
-        return view('detail_produk.index');
+        return view('detail_produk.index')->with([
+            'title' => 'Detail Produk | RevoEnergy.',
+        ]);
     }
 }
