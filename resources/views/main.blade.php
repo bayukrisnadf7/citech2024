@@ -11,7 +11,7 @@
 </head>
 <body>
   <div>
-    @if(!Request::is('login', 'register', 'member')) 
+    @if(!Request::is('login', 'register')) 
       @include('partials.navbar')
     @endif
   </div>

@@ -154,25 +154,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
-                    <img src="img/produk.png" alt="">
-                    <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
-                    <p class="font-bold text-xl">Rp. 220.000,00</p>
-                    <div class="flex text-xs gap-3 mt-2 items-center">
-                        <p class="bg-tertiary p-1 w-24 text-center font-bold rounded-full">Produk Jadi</p>
-                        <p>Stok: 12 Produk</p>
-                    </div>
-                    <div class="flex items-center gap-2 mt-2 text-xs">
-                        <div class="flex justify-center items-center gap-1">
-                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                            <p>4.9</p>
-                        </div>
-                        <div class="flex justify-center items-center gap-1">
-                            <p>|</p>
-                            <p>100+ Terjual</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
                     <img src="img/produk.png" alt="">
                     <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
@@ -229,7 +210,26 @@
                             <p>100+ Terjual</p>
                         </div>
                     </div>
-                </div> --}}
+                </div>
+                <div class="bg-slate-50 shadow p-3 max-w-56 rounded-3xl">
+                    <img src="img/produk.png" alt="">
+                    <p class="line-clamp-2 mt-3">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
+                    <p class="font-bold text-xl">Rp. 220.000,00</p>
+                    <div class="flex text-xs gap-3 mt-2 items-center">
+                        <p class="bg-tertiary p-1 w-24 text-center font-bold rounded-full">Produk Jadi</p>
+                        <p>Stok: 12 Produk</p>
+                    </div>
+                    <div class="flex items-center gap-2 mt-2 text-xs">
+                        <div class="flex justify-center items-center gap-1">
+                            <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                            <p>4.9</p>
+                        </div>
+                        <div class="flex justify-center items-center gap-1">
+                            <p>|</p>
+                            <p>100+ Terjual</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
