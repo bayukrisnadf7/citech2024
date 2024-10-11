@@ -7,7 +7,9 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProdukController;
 
 Route::get('/', function () {
-    return view('main');
+    return view('home.home', [
+        'title' => 'Beranda | RevoEnergy.',
+    ]);
 });
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
