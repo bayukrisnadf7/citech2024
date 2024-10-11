@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class ForumController extends Controller
 {
     public function index(){
-        return view('forum.index');
+        return view('forum.index')->with([
+            'title' => 'Forum | RevoEnergy.',
+        ]);
     }
 }
