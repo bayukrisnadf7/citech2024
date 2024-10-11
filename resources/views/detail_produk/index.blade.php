@@ -8,7 +8,7 @@
             <img src="img/produk.png" alt="" class="w-24 rounded-xl">
         </div>
         <div>
-            <img src="img/produk.png" alt="" width="550">
+            <img src="img/produk.png" alt="" width="620">
         </div>
         <div>
             <p class="text-3xl">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>
@@ -70,7 +70,7 @@
             </div>
         </div>
     </div>
-    <div class="max-w-max mt-5">
+    <div class="max-w-max mt-10">
         <ul class="flex cursor-pointer bg-slate-100 p-2 rounded-full items-center">
             <a href="/">
                 <li class="hover:bg-white p-2 rounded-full w-28 text-center">
@@ -91,7 +91,7 @@
     </div>
     <p class="mt-10 text-xl font-bold">320 Ulasan Customer</p>
     <div class="flex gap-10 mt-3 mb-10">
-        <div class="bg-slate-200 p-5 rounded-3xl max-w-2xl">
+        <div class="border p-5 rounded-3xl max-w-2xl">
             <div class="flex gap-3">
                 <i class="fa-solid fa-user bg-slate-400 p-4 rounded-full"></i>
                 <div>
@@ -135,7 +135,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-slate-200 p-5 rounded-3xl max-w-2xl">
+        <div class="border p-5 rounded-3xl max-w-2xl">
             <div class="flex gap-3">
                 <i class="fa-solid fa-user bg-slate-400 p-4 rounded-full"></i>
                 <div>

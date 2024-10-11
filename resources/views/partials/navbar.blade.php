@@ -18,12 +18,12 @@
                 Pelatihan
             </li>
         </a>
-        <a href="">
+        <a href="/forum">
             <li class="hover:bg-white p-2 rounded-full w-28 text-center">
                 Forum
             </li>
         </a>
-        <a href="">
+        <a href="/artikel">
             <li class="hover:bg-white p-2 rounded-full w-28 text-center">
                 Artikel
             </li>
