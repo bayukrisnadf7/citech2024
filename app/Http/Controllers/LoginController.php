@@ -8,6 +8,8 @@ class LoginController extends Controller
 {
     public function index()
     {
-        return view('auth.login.index');
+        return view('auth.login.index')->with([
+            'title' => 'Login | RevoEnergy.',
+        ]);
     }
 }
