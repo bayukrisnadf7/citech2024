@@ -9,7 +9,9 @@ use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ArtikelController;
 
 Route::get('/', function () {
-    return view('main');
+    return view('home.home', [
+        'title' => 'Beranda | RevoEnergy.',
+    ]);
 });
 Route::get('/login', [LoginController::class, 'index']);
 Route::get('/register', [RegisterController::class, 'index']);
