@@ -8,7 +8,7 @@ class ProdukController extends Controller
 {
     public function index(){
         return view('produk.index')->with([
-            'title' => 'Produk | RevoEnergy.',
+            'title' => 'Detail Produk | RevoEnergy.',
         ]);
     }
     public function detail(){
