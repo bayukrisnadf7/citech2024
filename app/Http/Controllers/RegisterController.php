@@ -10,4 +10,9 @@ class RegisterController extends Controller
     {
         return view('auth.register.index');
     }
+
+    public function tes()
+    {
+        return view('tes');
+    }
 }

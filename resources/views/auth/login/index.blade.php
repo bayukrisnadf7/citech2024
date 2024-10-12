@@ -1,5 +1,4 @@
 @extends('main')
-
 @section('content')
     <div class="container flex justify-center items-center min-h-screen">
         <div class="flex gap-14">
@@ -13,8 +12,6 @@
                     <p class="text-primary">Energy</p>
                 </div>
                 <p class="text-center font-bold text-5xl">Terbarukan</p>
-
-
                 <input type="text" class="input bg-slate-100 p-3 rounded-full w-full mt-8" placeholder="Masukan Email Anda!">
                 <input type="text" class="input bg-slate-100 p-3 rounded-full w-full mt-4" placeholder="Masukan Password!">
                 <button class="bg-primary p-3 rounded-full font-bold text-white text-lg w-full mt-8">Masuk</button>
@@ -22,7 +19,8 @@
 
             </div>
             <div>
-                <img src="img/login.png" alt="" width="550" height="500">
+                <img src="img/login.png" alt="" width="650" height="650">
             </div>
         </div>
     </div>
+@endsection
