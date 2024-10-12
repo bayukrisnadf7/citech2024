@@ -1,0 +1,19 @@
+/* Gaya untuk scrollbar */
+.custom-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #e0e0e0;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #e0e0e0;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+}
