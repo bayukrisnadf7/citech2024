@@ -20,35 +20,37 @@
     <div class="flex mt-10 gap-5">
         <div class="w-3/4">
             <div class="flex flex-col gap-5">
-                <div class="border w-full p-5 rounded-xl">
-                    <div class="flex gap-5">
-                        <img src="img/foto.png" alt="" width="60" class="max-h-max">
-                        <div class="flex flex-col">
-                            <div class="flex gap-5">
-                                <p>Agung</p>
-                                <p class="bg-slate-300 p-1 rounded-full max-h-max mt-2"></p>
-                                <p class="text-slate-300">Diposting 2 jam yang lalu</p>
-                            </div>
-                            <div class="mt-4">
-                                <p>Halo semua, saya tertarik untuk memasang panel surya di rumah saya sebagai alternatif
-                                    sumber listrik.
-                                    Apakah ada yang sudah punya pengalaman mengenai ini? Bagaimana efisiensinya untuk
-                                    kebutuhan listrik
-                                    sehari-hari, dan berapa lama pengembalian investasi dari biaya instalasi?</p>
-                            </div>
-                            <div class="flex items-center gap-5 mt-4">
-                                <div class="flex items-center text-slate-400 gap-2">
-                                    <i class="fa-regular fa-comment fa-lg"></i>
-                                    <p>5 Komentar</p>
+                <a href="/detail_forum">
+                    <div class="border w-full p-5 rounded-xl">
+                        <div class="flex gap-5">
+                            <img src="img/foto.png" alt="" width="60" class="max-h-max">
+                            <div class="flex flex-col">
+                                <div class="flex gap-5">
+                                    <p>Agung</p>
+                                    <p class="bg-slate-300 p-1 rounded-full max-h-max mt-2"></p>
+                                    <p class="text-slate-300">Diposting 2 jam yang lalu</p>
                                 </div>
-                                <div class="flex items-center text-slate-400 gap-2">
-                                    <i class="fa-solid fa-thumbs-up fa-lg"></i>
-                                    <p>30</p>
+                                <div class="mt-4">
+                                    <p>Halo semua, saya tertarik untuk memasang panel surya di rumah saya sebagai alternatif
+                                        sumber listrik.
+                                        Apakah ada yang sudah punya pengalaman mengenai ini? Bagaimana efisiensinya untuk
+                                        kebutuhan listrik
+                                        sehari-hari, dan berapa lama pengembalian investasi dari biaya instalasi?</p>
+                                </div>
+                                <div class="flex items-center gap-5 mt-4">
+                                    <div class="flex items-center text-slate-400 gap-2">
+                                        <i class="fa-regular fa-comment fa-lg"></i>
+                                        <p>5 Komentar</p>
+                                    </div>
+                                    <div class="flex items-center text-slate-400 gap-2">
+                                        <i class="fa-solid fa-thumbs-up fa-lg"></i>
+                                        <p>30</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
                 <div class="border w-full p-5 rounded-xl">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">

@@ -8,6 +8,7 @@ class PelatihanController extends Controller
 {
     public function pelatihan()
     {
+
         return view('pelatihan.menu-pelatihan')->with([
             'title' => 'Pelatihan | RevoEnergy.',
         ]);
@@ -20,3 +21,6 @@ class PelatihanController extends Controller
         ]);
     }
 }
+
+    
+
