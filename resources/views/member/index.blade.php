@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <div class="flex p-5 gap-10">
+    <div class="flex p-5 gap-10 mt-10">
         <div class="bg-gradient-to-r from-primary to-teal-800 w-1/3 rounded-3xl">
             <div class="p-5">
                 <div class="flex text-2xl gap-2 text-white ">
