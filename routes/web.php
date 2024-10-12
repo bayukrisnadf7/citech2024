@@ -22,6 +22,7 @@ Route::get('/member', [MemberController::class, 'index']);
 Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/detail_produk', [ProdukController::class, 'detail']);
 Route::get('/pelatihan', [PelatihanController::class, 'pelatihan']);
+Route::get('/detail-pelatihan', [PelatihanController::class, 'detail_pelatihan']);
 
 
 

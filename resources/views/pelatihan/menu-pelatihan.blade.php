@@ -95,101 +95,79 @@
                 <option>Harga Tertinggi</option>
             </select>
             <i class="ph-magnifying-glass"></i>
-
         </div>
 
-        <!-- Training Cards Grid -->
+        <!-- List Pelatihan -->
         <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <!-- Pelatihan 1 -->
             <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="online">
-                {{-- Gambar Pelatihan --}}
                 <img src="{{ asset('img/pelatihan/pelatihan3.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
-                
-                <a href="{{ url('/produk') }}">
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
                     <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Energi Terbarukan untuk Pemula</h3>
-                    {{-- Deskripsi Pelatihan --}}
                     <p class="text-sm text-gray-400 mb-2">Kursus pengenalan energi terbarukan untuk pemula, yang mencakup konsep...</p>
-                    {{-- Mentor Pelatihan --}}
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
                             <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
                             <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Jam</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                             <p class="text-sm text-black font-medium">Online</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
                             </a>
-                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                            <a href="{{ url('/detail-pelatihan') }}">
+                                <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                            </a>
                         </div>
                     </div>
                 </div>
-                </a>
             </div>
 
             <!-- Pelatihan 2 -->
-            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="online">
-                {{-- Gambar Pelatihan --}}
-                <img src="{{ asset('img/pelatihan/pelatihan1.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="offline">
+                <img src="{{ asset('img/pelatihan/pelatihan2.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
-                    <h3 class="text-lg font-semibold text-black mb-2">Pembuatan Sistem Hybrid Energi Terbarukan</h3>
-                    {{-- Deskripsi Pelatihan --}}
-                    <p class="text-sm text-gray-400 mb-2">Pelatihan yang mengajarkan cara menggabungkan beberapa sumber...</p>
-                    {{-- Mentor Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya</h3>
+                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
-                            <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
-                            <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
+                            <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">7 Jam</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Hari</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
-                            <p class="text-sm text-black font-medium">Online</p>
+                            <p class="text-sm text-black font-medium">Offline</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
@@ -201,44 +179,34 @@
             </div>
 
             <!-- Pelatihan 3 -->
-            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="offline">
-                {{-- Gambar Pelatihan --}}
-                <img src="{{ asset('img/pelatihan/pelatihan2.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="online">
+                <img src="{{ asset('img/pelatihan/pelatihan1.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
-                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya</h3>
-                    {{-- Deskripsi Pelatihan --}}
-                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
-                    {{-- Mentor Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pembuatan Sistem Hybrid Energi Terbarukan</h3>
+                    <p class="text-sm text-gray-400 mb-2">Pelatihan yang mengajarkan cara menggabungkan beberapa sumber...</p>
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
-                            <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
-                            <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
+                            <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Hari</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">7 Jam</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
-                            <p class="text-sm text-black font-medium">Offline</p>
+                            <p class="text-sm text-black font-medium">Online</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
@@ -251,43 +219,33 @@
 
             <!-- Pelatihan 4 -->
             <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="offline">
-                {{-- Gambar Pelatihan --}}
                 <img src="{{ asset('img/pelatihan/pelatihan4.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
                     <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Sistem Penyimpanan Energi (Baterai dan Teknologi...</h3>
-                    {{-- Deskripsi Pelatihan --}}
                     <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
-                    {{-- Mentor Pelatihan --}}
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
                             <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
                             <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                             <p class="text-sm text-black font-medium">Offline</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
@@ -300,43 +258,33 @@
 
             <!-- Pelatihan 5 -->
             <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="online">
-                {{-- Gambar Pelatihan --}}
                 <img src="{{ asset('img/pelatihan/pelatihan5.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
                     <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Konstruksi Bangunan Berenergi Terbarukan</h3>
-                    {{-- Deskripsi Pelatihan --}}
                     <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
-                    {{-- Mentor Pelatihan --}}
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
                             <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
                             <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                             <p class="text-sm text-black font-medium">Online</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
@@ -349,43 +297,33 @@
              
             <!-- Pelatihan 6 -->
             <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="online">
-                {{-- Gambar Pelatihan --}}
                 <img src="{{ asset('img/pelatihan/pelatihan6.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    {{-- Judul Pelatihan --}}
                     <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Energi Terbarukan untuk Sektor Pertanian</h3>
-                    {{-- Deskripsi Pelatihan --}}
                     <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
-                    {{-- Mentor Pelatihan --}}
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     
                     <div class="flex items-center mb-3">
-                        {{-- Level --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
                             <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
                         </div>
-                        {{-- Divide  Bar--}}
                         <div class="px-2">
                             <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
                         </div>  
-                        {{-- Durasi --}}
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
                             <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
                         </div>
                     </div>
                     
-                    {{-- Harga Kelas --}}
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
                     <div class="flex justify-between items-center mt-4">
-                        {{-- Kategori Pelatihan --}}
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                             <p class="text-sm text-black font-medium">Online</p>
                         </div>
-                        {{-- Icon Shop Chart dan Button Daftar--}}
                         <div class="flex items-center ml-auto space-x-2"> 
                             <a href="#" class="cursor-pointer">
                                 <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">

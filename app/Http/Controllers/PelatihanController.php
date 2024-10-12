@@ -12,4 +12,11 @@ class PelatihanController extends Controller
             'title' => 'Pelatihan | RevoEnergy.',
         ]);
     }
+
+    public function detail_pelatihan()
+    {
+        return view('pelatihan.detail-pelatihan')->with([
+            'title' => 'Detail Pelatihan | RevoEnergy.',
+        ]);
+    }
 }
