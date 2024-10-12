@@ -7,6 +7,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ArtikelController;
+use App\Http\Controllers\PelatihanController;
 
 Route::get('/', function () {
     return view('home.home', [
@@ -22,3 +23,5 @@ Route::get('/forum', [ForumController::class, 'index']);
 Route::get('/artikel', [ArtikelController::class, 'index']);
 Route::get('/detail_forum', [ForumController::class, 'detail']);
 Route::get('/detail_artikel', [ArtikelController::class, 'detail']);
+Route::get('/pelatihan', [PelatihanController::class, 'pelatihan']);
+Route::get('/detail-pelatihan', [PelatihanController::class, 'detail_pelatihan']);

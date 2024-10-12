@@ -13,7 +13,7 @@
                 Produk
             </li>
         </a>
-        <a href="">
+        <a href="/pelatihan">
             <li class="hover:bg-white p-2 rounded-full w-28 text-center">
                 Pelatihan
             </li>
@@ -35,8 +35,8 @@
         </a>
     </ul>
     <div class="flex gap-3 items-center">
-        <i class="fa-solid fa-magnifying-glass bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
-        <button onclick="window.location.href='/member'" class="p-3 rounded-full flex gap-2 items-center bg-[#171717] text-white text-[14px] font-medium">
+        <i data-modal-target="search-modal" data-modal-toggle="search-modal" class="fa-solid fa-magnifying-glass bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
+        <button onclick="window.location.href='/login'" class="p-3 rounded-full flex gap-2 items-center bg-[#171717] text-white text-[14px] font-medium">
             <div class="--icon"><img src="{{ asset('img/circle-bolt.png') }}" class="w-[20px] h-[20px] bg-cover" alt=""></div>
             <span>Upgrade</span>
         </button>
