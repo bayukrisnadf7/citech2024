@@ -18,23 +18,25 @@
     <div class="flex mt-10 gap-5">
         <div class="w-3/4">
             <div class="flex flex-col gap-5">
-                <div class="border w-full p-5 rounded-xl max-h-56">
-                    <div class="flex gap-5">
-                        <div class="flex flex-col">
-                            <p class="font-bold text-2xl">Pemanfaatan Limbah Sampah Menjadi Energi</p>
-                            <div class="mt-4">
-                                <p class="line-clamp-3 text-slate-400">Proses mengubah limbah, terutama sampah organik,
-                                    menjadi sumber
-                                    energi yang bermanfaat, seperti listrik, panas, atau bahan bakar. Teknologi ini tidak
-                                    hanya membantu mengurangi jumlah limbah yang berakhir di tempat pembuangan akhir (TPA),
-                                    tetapi juga berkontribusi pada produksi energi terbarukan yang lebih bersih dan ramah
-                                    lingkungan.</p>
+                <a href="/detail_artikel">
+                    <div class="border w-full p-5 rounded-xl max-h-56">
+                        <div class="flex gap-5">
+                            <div class="flex flex-col">
+                                <p class="font-bold text-2xl">Pemanfaatan Limbah Sampah Menjadi Energi</p>
+                                <div class="mt-4">
+                                    <p class="line-clamp-3 text-slate-400">Proses mengubah limbah, terutama sampah organik,
+                                        menjadi sumber
+                                        energi yang bermanfaat, seperti listrik, panas, atau bahan bakar. Teknologi ini tidak
+                                        hanya membantu mengurangi jumlah limbah yang berakhir di tempat pembuangan akhir (TPA),
+                                        tetapi juga berkontribusi pada produksi energi terbarukan yang lebih bersih dan ramah
+                                        lingkungan.</p>
+                                </div>
+                                <p class="mt-5 text-secondary">24 September 2024</p>
                             </div>
-                            <p class="mt-5 text-secondary">24 September 2024</p>
+                            <img src="img/artikel-1.png" alt="" width="300" class="max-h-max">
                         </div>
-                        <img src="img/artikel-1.png" alt="" width="300" class="max-h-max">
                     </div>
-                </div>
+                </a>
                 <div class="border w-full p-5 rounded-xl max-h-56">
                     <div class="flex gap-5">
                         <div class="flex flex-col">

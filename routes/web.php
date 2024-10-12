@@ -20,3 +20,5 @@ Route::get('/produk', [ProdukController::class, 'index']);
 Route::get('/detail_produk', [ProdukController::class, 'detail']);
 Route::get('/forum', [ForumController::class, 'index']);
 Route::get('/artikel', [ArtikelController::class, 'index']);
+Route::get('/detail_forum', [ForumController::class, 'detail']);
+Route::get('/detail_artikel', [ArtikelController::class, 'detail']);

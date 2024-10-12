@@ -11,4 +11,10 @@ class ArtikelController extends Controller
             'title' => 'Artikel | RevoEnergy.',
         ]);
     }
+
+    public function detail(){
+        return view('detail_artikel.index')->with([
+            'title' => 'Detail Artikel | RevoEnergy.',
+        ]);
+    }
 }
