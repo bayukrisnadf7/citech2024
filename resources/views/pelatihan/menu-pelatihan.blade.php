@@ -55,10 +55,10 @@
 </div>   --}}
 
 <!-- Container -->
-<div class="container mx-auto flex gap-5 px-2">
+<div class="container mx-auto flex gap-5 px-2 justify-center">
         
     <!-- Sidebar Filters -->
-    <div class="w-1/5 bg-white p-4 rounded-lg shadow">
+    <div class="w-1/5 h-full p-4 rounded-lg shadow">
         <div class="mb-6">
             <h3 class="text-lg font-semibold mb-2">Tingkat Pelatihan</h3>
             <ul>
@@ -74,7 +74,7 @@
             <ul>
                 <li><input type="radio" name="category" id="all" checked class="mr-2"><label for="all">Semua</label></li>
                 <li><input type="radio" name="category" id="online" class="mr-2"><label for="online">Online</label></li>
-                <li><input type="radio" name="category" id="workshop" class="mr-2"><label for="workshop">Workshop Offline</label></li>
+                <li><input type="radio" name="category" id="offline" class="mr-2"><label for="offline">Workshop Offline</label></li>
             </ul>
         </div>
     </div>
@@ -99,52 +99,346 @@
         </div>
 
         <!-- Training Cards Grid -->
-        <div class="grid grid-cols-3 gap-6">
-            <!-- Training Card 1 -->
-            <div class="bg-white p-4 rounded-lg shadow">
-                <img src="your-image1.jpg" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-lg font-semibold">Pembuatan Sistem Hybrid Energi Terbarukan</h3>
-                <p class="text-sm text-gray-500 mb-4">Pelatihan yang mengajarkan cara menggabungkan beberapa sumber energi terbarukan...</p>
-                <p class="text-sm font-semibold">Pengajar: <span class="font-normal">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
-                <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
-                <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Hari</span></p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-green-500 font-semibold">Rp. 100.000,00</span>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg">Daftar Kelas</button>
+        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <!-- Pelatihan 1 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="online">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan3.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <a href="{{ url('/produk') }}">
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Energi Terbarukan untuk Pemula</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Kursus pengenalan energi terbarukan untuk pemula, yang mencakup konsep...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Jam</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Online</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Pelatihan 2 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="online">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan1.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pembuatan Sistem Hybrid Energi Terbarukan</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Pelatihan yang mengajarkan cara menggabungkan beberapa sumber...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">7 Jam</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Online</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Training Card 2 -->
-            <div class="bg-white p-4 rounded-lg shadow">
-                <img src="your-image2.jpg" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-lg font-semibold">Pelatihan Desain Sistem Panel Surya</h3>
-                <p class="text-sm text-gray-500 mb-4">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
-                <p class="text-sm font-semibold">Pengajar: <span class="font-normal">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
-                <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
-                <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-green-500 font-semibold">Rp. 1.200.000,00</span>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg">Daftar Kelas</button>
+            <!-- Pelatihan 3 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="offline">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan2.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Hari</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Offline</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Training Card 3 -->
-            <div class="bg-white p-4 rounded-lg shadow">
-                <img src="your-image3.jpg" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-lg mb-4">
-                <h3 class="text-lg font-semibold">Pelatihan Energi Terbarukan untuk Pemula</h3>
-                <p class="text-sm text-gray-500 mb-4">Kursus pengenalan energi terbarukan untuk pemula...</p>
-                <p class="text-sm font-semibold">Pengajar: <span class="font-normal">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
-                <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
-                <p class="text-sm font-semibold">Durasi: <span class="font-normal">2 Minggu</span></p>
-                <div class="flex justify-between items-center mt-4">
-                    <span class="text-green-500 font-semibold">Rp. 1.200.000,00</span>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded-lg">Daftar Kelas</button>
+            <!-- Pelatihan 4 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="offline">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan4.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Sistem Penyimpanan Energi (Baterai dan Teknologi...</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Offline</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <!-- Add more cards similarly -->
+
+            <!-- Pelatihan 5 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="menengah" data-category="online">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan5.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Konstruksi Bangunan Berenergi Terbarukan</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-menengah.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Menengah</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Online</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+            <!-- Pelatihan 6 -->
+            <div class="pelatihan-card bg-white rounded-lg shadow h-auto" data-level="pemula" data-category="online">
+                {{-- Gambar Pelatihan --}}
+                <img src="{{ asset('img/pelatihan/pelatihan6.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
+                
+                <div class="p-2">
+                    {{-- Judul Pelatihan --}}
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Energi Terbarukan untuk Sektor Pertanian</h3>
+                    {{-- Deskripsi Pelatihan --}}
+                    <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
+                    {{-- Mentor Pelatihan --}}
+                    <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
+                    
+                    <div class="flex items-center mb-3">
+                        {{-- Level --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/bar-level-pemula.png') }}" class="w-auto h-3.5">
+                            <p class="text-sm font-semibold">Level: <span class="font-normal">Pemula</span></p>
+                        </div>
+                        {{-- Divide  Bar--}}
+                        <div class="px-2">
+                            <img src="{{ asset('img/pelatihan/divide-bar.png') }}" class="w-auto h-3.5">
+                        </div>  
+                        {{-- Durasi --}}
+                        <div class="flex items-center gap-x-1">
+                            <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                        </div>
+                    </div>
+                    
+                    {{-- Harga Kelas --}}
+                    <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+
+                    <div class="flex justify-between items-center mt-4">
+                        {{-- Kategori Pelatihan --}}
+                        <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
+                            <p class="text-sm text-black font-medium">Online</p>
+                        </div>
+                        {{-- Icon Shop Chart dan Button Daftar--}}
+                        <div class="flex items-center ml-auto space-x-2"> 
+                            <a href="#" class="cursor-pointer">
+                                <img src="{{ asset('img/pelatihan/shop-chart.png') }}" class="h-11 w-auto">
+                            </a>
+                            <button class="bg-[#307B74] text-white px-2 py-2.5 text-sm font-medium rounded-xl">Daftar Kelas</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     
 </div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Ambil semua radio button
+        const levelRadios = document.querySelectorAll('input[name="level"]');
+        const categoryRadios = document.querySelectorAll('input[name="category"]');
+        const cards = document.querySelectorAll('.pelatihan-card');
+
+        function filterCards() {
+            // Ambil nilai level dan category yang terpilih
+            const selectedLevel = Array.from(levelRadios).find(radio => radio.checked)?.id;
+            const selectedCategory = Array.from(categoryRadios).find(radio => radio.checked)?.id;
+
+            cards.forEach(card => {
+                const cardLevel = card.getAttribute('data-level');
+                const cardCategory = card.getAttribute('data-category');
+
+                // Periksa apakah card sesuai dengan filter
+                const levelMatch = selectedLevel === 'semua' || cardLevel === selectedLevel;
+                const categoryMatch = selectedCategory === 'all' || cardCategory === selectedCategory;
+
+                // Tampilkan atau sembunyikan card
+                if (levelMatch && categoryMatch) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Tambahkan event listener pada semua radio button
+        levelRadios.forEach(radio => {
+            radio.addEventListener('change', filterCards);
+        });
+        categoryRadios.forEach(radio => {
+            radio.addEventListener('change', filterCards);
+        });
+    });
+</script>
+
 @endsection

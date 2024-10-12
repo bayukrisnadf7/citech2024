@@ -8,7 +8,9 @@ class RegisterController extends Controller
 {
     public function index()
     {
-        return view('auth.register.index');
+        return view('auth.register.index')->with([
+            'title' => 'Register | RevoEnergy.',
+        ]);
     }
 
     public function tes()
