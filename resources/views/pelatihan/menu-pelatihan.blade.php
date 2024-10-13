@@ -82,7 +82,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Jam</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">1 Jam 26 M</span></p>
                         </div>
                     </div>
                     
@@ -123,7 +123,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Hari</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">1 Minggu</span></p>
                         </div>
                     </div>
                     
@@ -164,7 +164,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">7 Jam</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Jam</span></p>
                         </div>
                     </div>
                     
@@ -203,7 +203,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">5 Hari</span></p>
                         </div>
                     </div>
                     
@@ -242,7 +242,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">2 Jam</span></p>
                         </div>
                     </div>
                     
@@ -281,7 +281,7 @@
                         </div>  
                         <div class="flex items-center gap-x-1">
                             <img src="{{ asset('img/pelatihan/clock.png') }}" class="w-auto h-4">
-                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">6 Bulan</span></p>
+                            <p class="text-sm font-semibold">Durasi: <span class="font-normal">3 Jam 30 M</span></p>
                         </div>
                     </div>
                     

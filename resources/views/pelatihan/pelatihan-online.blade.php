@@ -11,6 +11,11 @@
             dan lainnya, serta cara mengaplikasikannya untuk kebutuhan energi yang efisien dan ramah lingkungan
         </p>
         
+        <div class="mb-5">
+            <h2 class="text-lg font-semibold text-black">Waktu Pelatihan</h2>
+            <p>Pelatihan ini berdurasi total 1 Jam 26 Menit</p>
+        </div>
+
         <h2 class="text-lg font-semibold text-black">Apa yang Akan Dipelajari:</h2>
         <ul class="list-disc pl-5 space-y-2 text-black mb-5">
             <li class="leading-relaxed">Dasar-dasar energi terbarukan: Pengenalan sumber energi seperti matahari, angin, dan biomassa</li>
