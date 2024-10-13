@@ -13,7 +13,7 @@
                 Produk
             </li>
         </a>
-        <a href="">
+        <a href="/pelatihan">
             <li class="hover:bg-white p-2 rounded-full w-28 text-center">
                 Pelatihan
             </li>

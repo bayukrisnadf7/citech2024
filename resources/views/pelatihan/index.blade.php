@@ -55,7 +55,7 @@
 </div>   --}}
 
 <!-- Container -->
-<div class="container mx-auto flex gap-5 px-2 justify-center">
+<div class="container mx-auto flex gap-8 px-2 justify-center">
         
     <!-- Sidebar Filters -->
     <div class="w-1/5 h-full p-4 rounded-lg shadow">
@@ -82,14 +82,12 @@
     <!-- Main Content -->
     <div class="w-4/5">
         <!-- Search & Sort Bar -->
-        <div class="flex justify-between items-center mb-6">
-            <div class="relative w-2/3">
-                <span class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <i class="ph-magnifying-glass text-gray-500 text-xl"></i>
-                </span>
-                <input type="text" placeholder="Cari Pelatihan" class="w-full p-2 pl-10 border rounded-md">
+        <div class="flex justify-between items-center mb-6 gap-5">
+            <div class="relative w-full">
+                <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
+                <input type="text" placeholder="Cari Nama Barang" class="border p-3 px-10 w-full rounded-lg">
             </div>
-            <select class="border rounded-md p-2">
+            <select class="border rounded-md p-3">
                 <option>Terbaru</option>
                 <option>Harga Terendah</option>
                 <option>Harga Tertinggi</option>
@@ -144,7 +142,7 @@
                 <img src="{{ asset('img/pelatihan/pelatihan2.png') }}" alt="Pelatihan Image" class="w-full h-40 object-cover rounded-t-lg">
                 
                 <div class="p-2">
-                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya</h3>
+                    <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya Pemula</h3>
                     <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya, cara instalasi...</p>
                     <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</span></p>
                     

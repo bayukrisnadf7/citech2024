@@ -2,13 +2,13 @@
 @section('content')
     <div class="flex gap-14 mt-5">
         <div class="flex flex-col gap-2">
-            <img src="img/produk.png" alt="" class="w-24 rounded-xl">
-            <img src="img/produk.png" alt="" class="w-24 rounded-xl">
-            <img src="img/produk.png" alt="" class="w-24 rounded-xl">
-            <img src="img/produk.png" alt="" class="w-24 rounded-xl">
+            <img src="img/produk-1.png" alt="" class="w-24 rounded-xl">
+            <img src="img/produk-1.png" alt="" class="w-24 rounded-xl">
+            <img src="img/produk-1.png" alt="" class="w-24 rounded-xl">
+            <img src="img/produk-1.png" alt="" class="w-24 rounded-xl">
         </div>
         <div>
-            <img src="img/produk.png" alt="" width="620">
+            <img src="img/produk-1.png" alt="" width="620">
         </div>
         <div>
             <p class="text-3xl">ROMAN Solar Panel Portable 10W 4 Folding Charging Board</p>

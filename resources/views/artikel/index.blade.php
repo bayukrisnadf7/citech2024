@@ -4,12 +4,13 @@
         <div class="flex w-full gap-3">
             <div class="relative w-full">
                 <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
-                <input type="text" placeholder="Cari Nama Barang" class="border p-3 px-10 w-full rounded-lg">
+                <input type="text" placeholder="Cari Artikel" class="border p-3 px-10 w-full rounded-lg">
             </div>
-            <div class="flex gap-3 items-center">
-                <p>URUTKAN:</p>
-                <p class="border p-2 rounded-xl">Terbaru</p>
-            </div>
+            <select class="border rounded-md p-3">
+                <option>Terbaru</option>
+                <option>Harga Terendah</option>
+                <option>Harga Tertinggi</option>
+            </select>
         </div>
     </div>
     <div class="mt-5">
