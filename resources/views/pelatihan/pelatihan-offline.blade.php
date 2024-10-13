@@ -4,7 +4,7 @@
 <div class="container mx-auto flex gap-5 px-2 justify-center">
     <div class="w-2/3 p-4">
         <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Desain Sistem Panel Surya</h1>
-        <p class="mb-6 text-justify text-black">
+        <p class="mb-5 text-justify text-black">
             Pelatihan ini dirancang untuk memberikan pemahaman mendalam mengenai desain dan implementasi sistem panel surya,
             termasuk komponen utama, perhitungan kebutuhan energi, instalasi, dan pemeliharaan sistem. 
             Peserta akan mendapatkan pengalaman langsung dalam merancang dan membangun sistem panel surya yang efektif dan berkelanjutan
@@ -17,10 +17,10 @@
 
         <div class="mb-5">
             <h2 class="text-lg font-semibold text-black">Silabus Pelatihan</h2>
-            <ul class="list-none space-y-4 text-black">
+            <ul class="list-none -space-y-2 text-black">
                 <li>
                     <p class="font-medium">1. Pengantar Teknologi Panel Surya</p>
-                    <ul class="list-disc pl-8 space-y-2 text-black mb-5">
+                    <ul class="list-disc pl-8 space-y-1 text-black mb-5">
                         <li class="leading-relaxed">Dasar-dasar energi surya dan panel fotovoltaik</li>
                         <li class="leading-relaxed">Prinsip kerja panel surya</li>
                         <li class="leading-relaxed">Manfaat energi terbarukan</li>
@@ -29,7 +29,7 @@
                 </li>
                 <li>
                     <p class="font-medium">2. Perencanaan Kebutuhan Energi</p>
-                    <ul class="list-disc pl-8 space-y-2 text-black mb-5">
+                    <ul class="list-disc pl-8 space-y-1 text-black mb-5">
                         <li class="leading-relaxed">Menghitung kebutuhan energi rumah tangga/industri</li>
                         <li class="leading-relaxed">Menghitung kapasitas panel yang dibutuhkan</li>
                         <li class="leading-relaxed">Perhitungan daya tahan dan efisiensi</li>
@@ -37,7 +37,7 @@
                 </li>
                 <li>
                     <p class="font-medium">3. Perencanaan Kebutuhan Energi</p>
-                    <ul class="list-disc pl-8 space-y-2 text-black mb-5">
+                    <ul class="list-disc pl-8 space-y-1 text-black mb-5">
                         <li class="leading-relaxed">Penjelasan komponen: inverter, baterai, panel, dan lainnya</li>
                         <li class="leading-relaxed">Fungsi dan cara memilih komponen yang sesuai</li>
                         <li class="leading-relaxed">Pengkabelan dan pengaturan sistem panel surya</li>
@@ -45,7 +45,7 @@
                 </li>
                 <li>
                     <p class="font-medium">4. Desain dan Simulasi Sistem Panel Surya</p>
-                    <ul class="list-disc pl-8 space-y-2 text-black mb-5">
+                    <ul class="list-disc pl-8 space-y-1 text-black mb-5">
                         <li class="leading-relaxed">Penggunaan perangkat lunak untuk simulasi desain</li>
                         <li class="leading-relaxed">Merancang sistem sesuai kebutuhan spesifik</li>
                         <li class="leading-relaxed">Diskusi hasil simulasi dan optimasi desain</li>
@@ -53,7 +53,7 @@
                 </li>
                 <li>
                     <p class="font-medium">5. Instalasi dan Uji Coba Sistem</p>
-                    <ul class="list-disc pl-8 space-y-2 text-black mb-5">
+                    <ul class="list-disc pl-8 space-y-1 text-black mb-5">
                         <li class="leading-relaxed">Proses instalasi sistem panel surya</li>
                         <li class="leading-relaxed">Uji coba dan pengujian sistem secara langsung</li>
                         <li class="leading-relaxed">Uji coba dan pengujian sistem secara langsung</li>

@@ -4,7 +4,7 @@
 <div class="container mx-auto flex gap-5 px-2 justify-center">
     <div class="w-2/3 p-4">
         <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Energi Terbarukan untuk Pemula</h1>
-        <p class="mb-6 text-justify text-black">
+        <p class="mb-5 text-justify text-black">
             Kelas ini dirancang untuk memberikan pemahaman dasar mengenai energi terbarukan, konsep, 
             serta aplikasi praktis dari energi terbarukan dalam kehidupan sehari-hari. Dalam pelatihan ini, 
             peserta akan mempelajari jenis-jenis energi terbarukan seperti tenaga surya, angin, biomassa, 
