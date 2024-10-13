@@ -3,7 +3,7 @@
 <!-- Container -->
 <div class="container mx-auto flex gap-5 px-2 justify-center">
     <div class="w-2/3 p-4">
-        <h1 class="text-3xl font-semibold mb-4 text-black">Pelatihan Energi Terbarukan untuk Pemula</h1>
+        <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Energi Terbarukan untuk Pemula</h1>
         <p class="mb-6 text-justify text-black">
             Kelas ini dirancang untuk memberikan pemahaman dasar mengenai energi terbarukan, konsep, 
             serta aplikasi praktis dari energi terbarukan dalam kehidupan sehari-hari. Dalam pelatihan ini, 
@@ -12,12 +12,13 @@
         </p>
         
         <h2 class="text-lg font-semibold text-black">Apa yang Akan Dipelajari:</h2>
-        <ul class="list-disc list-inside space-y-1 text-black mb-6">
-            <li>Dasar-dasar energi terbarukan: Pengenalan sumber energi seperti matahari, angin, dan biomassa</li>
-            <li>Jenis-jenis energi terbarukan: Belajar mengenali berbagai macam energi yang dapat diperbarui</li>
-            <li>Aplikasi praktis energi terbarukan: Studi kasus implementasi energi terbarukan dalam kehidupan sehari-hari</li>
-            <li>Teknik mengoptimalkan penggunaan energi: Menemukan cara paling efisien untuk menggunakan energi terbarukan dalam skala rumah tangga maupun industri</li>
+        <ul class="list-disc pl-5 space-y-2 text-black mb-5">
+            <li class="leading-relaxed">Dasar-dasar energi terbarukan: Pengenalan sumber energi seperti matahari, angin, dan biomassa</li>
+            <li class="leading-relaxed">Jenis-jenis energi terbarukan: Belajar mengenali berbagai macam energi yang dapat diperbarui</li>
+            <li class="leading-relaxed">Aplikasi praktis energi terbarukan: Studi kasus implementasi energi terbarukan dalam kehidupan sehari-hari</li>
+            <li class="leading-relaxed">Teknik mengoptimalkan penggunaan energi: Menemukan cara paling efisien untuk menggunakan energi terbarukan dalam skala rumah tangga maupun industri</li>
         </ul>
+        
         
         <!-- Materi Kelas -->
         <h2 class="text-lg font-semibold mb-2 text-black">Materi Pelatihan</h2>
@@ -251,165 +252,95 @@
                     </div>
                 </div>
             </div>
+
+            <div class="border border-gray-300 rounded-lg p-4">
+                <div class="flex items-center space-x-2 mb-2">
+                    <img src="{{ asset('img/pelatihan/user1.png') }}" class="w-auto h-10 rounded-full">
+                    <div class="flex-col items-center">
+                        <p class="font-medium">Budi Santoso</p>
+                        <div class="flex items-center -mt-1 space-x-1">
+                            <img src="{{ asset('img/pelatihan/five-star.png') }}" class="w-auto h-2.5">
+                            <div class="w-2 h-2 bg-gray-300 rounded-full"></div>
+                            <p class="text-sm">3 Hari Lalu</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="mb-6 text-justify text-black">
+                    Kursus ini benar-benar membuka wawasan saya tentang implementasi sistem energi terbarukan. 
+                    Penjelasannya sangat mendetail, dan saya bisa langsung menerapkannya di proyek kecil di rumah saya. 
+                    Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk siapa saja yang ingin terjun di bidang energi terbarukan!
+                </p>
+                <div class="flex space-x-3">
+                    <div class="flex space-x-1 items-center cursor-pointer">
+                        <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
+                        <p class="text-sm">25 Suka</p>
+                    </div>
+
+                    <div class="flex space-x-1 items-center cursor-pointer">
+                        <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
+                        <p class="text-sm">25 Komentar</p>
+                    </div>
+
+                    <div class="flex space-x-1 items-center cursor-pointer">
+                        <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
+                        <p class="text-sm">25 Dibagikan</p>
+                    </div>
+
+                    <div class="flex space-x-1 items-center cursor-pointer">
+                        <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
+                        <p class="text-sm">Laporkan</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-{{-- <!-- Container utama -->
-<div class="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-3 gap-8">
-    <!-- Bagian Kiri - Deskripsi Kelas -->
-    <div class="lg:col-span-2 p-6">
-        <h1 class="text-2xl font-bold mb-4">Pembuatan System Hybrid Energi Terbarukan</h1>
-        <p class="text-gray-700 mb-6">
-            Kelas ini dirancang untuk memberikan pemahaman mendalam tentang konsep dan implementasi sistem hybrid 
-            energi terbarukan, yang menggabungkan beberapa sumber energi seperti tenaga surya, angin, dan baterai 
-            untuk menghasilkan listrik yang efisien dan ramah lingkungan...
-        </p>
-        
-        <h2 class="text-xl font-semibold mb-4">Apa yang Akan Dipelajari:</h2>
-        <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-            <li>Dasar-dasar energi terbarukan: Sumber energi seperti matahari, angin, dan biomassa.</li>
-            <li>Komponen utama dalam sistem hybrid: Panel surya, turbin angin, inverter, baterai penyimpanan, dll.</li>
-            <li>Teknik merancang dan mengelola sistem hybrid untuk kebutuhan energi spesifik.</li>
-            <li>Teknik manajemen daya dan efisiensi energi.</li>
-            <li>Studi kasus penerapan sistem hybrid energi terbarukan di dunia nyata.</li>
-        </ul>
-        
-        <!-- Materi Kelas -->
-        <h2 class="text-xl font-semibold mb-4">Materi Kelas</h2>
-        <div class="space-y-6">
-            <!-- Modul 1 -->
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h3 class="text-lg font-semibold mb-2">1. Pengenalan Dasar Energi Terbarukan</h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li>• Pengantar Energi Terbarukan <span class="float-right">5:00</span></li>
-                    <li>• Jenis-jenis Sumber Energi Terbarukan <span class="float-right">7:00</span></li>
-                </ul>
-            </div>
-            <!-- Modul 2 -->
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h3 class="text-lg font-semibold mb-2">2. Komponen Sistem Hybrid</h3>
-                <ul class="space-y-2 text-gray-700">
-                    <li>• Panel Surya dan Cara Kerjanya <span class="float-right">11:00</span></li>
-                    <li>• Turbin Angin dalam Sistem Hybrid <span class="float-right">10:00</span></li>
-                    <li>• Baterai Penyimpanan dan Pengelolaan Energi <span class="float-right">8:30</span></li>
-                </ul>
-            </div>
-            <!-- Modul 3 -->
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h3 class="text-lg font-semibold mb-2">3. Desain Sistem Hybrid</h3>
-            </div>
-            <!-- Modul 4 -->
-            <div class="border border-gray-300 rounded-lg p-4">
-                <h3 class="text-lg font-semibold mb-2">4. Manajemen dan Optimasi Sistem</h3>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bagian Kanan - Mentor dan Review -->
-    <div class="bg-white p-6 rounded-lg shadow-md">
-        <!-- Mentor Section -->
-        <div class="text-center mb-8">
-            <img src="https://via.placeholder.com/150" alt="Mentor" class="rounded-full w-24 h-24 mx-auto mb-4">
-            <h2 class="text-xl font-semibold">Mentor Kelas</h2>
-            <p class="text-gray-600">Prof. Dr. Ir. Ahmad Fajar, M.Eng</p>
-            <p class="text-gray-500 text-sm">Engineer Energi Terbarukan</p>
-            <button class="mt-4 bg-green-500 text-white px-4 py-2 rounded-lg">Daftar Kelas</button>
-        </div>
-
-        <!-- Customer Reviews -->
-        <h2 class="text-lg font-semibold mb-4">320 Ulasan Customer</h2>
-
-        <!-- Review 1 -->
-        <div class="border-t border-gray-300 pt-4">
-            <div class="flex items-center space-x-4">
-                <img src="https://via.placeholder.com/50" alt="User" class="rounded-full w-12 h-12">
-                <div>
-                    <h3 class="font-semibold">Budi Santoso</h3>
-                    <p class="text-sm text-gray-500">5 Hari Lalu</p>
-                    <p class="text-sm text-yellow-500">★★★★★</p>
-                </div>
-            </div>
-            <p class="mt-2 text-gray-700">Kursus ini benar-benar membuka wawasan saya...</p>
-            <div class="mt-2 flex items-center space-x-2 text-gray-500 text-sm">
-                <span>24 Likes</span>
-                <span>16 Balasan</span>
-                <span>7 Share</span>
-            </div>
-        </div>
-
-        <!-- Review 2 -->
-        <div class="border-t border-gray-300 pt-4 mt-4">
-            <div class="flex items-center space-x-4">
-                <img src="https://via.placeholder.com/50" alt="User" class="rounded-full w-12 h-12">
-                <div>
-                    <h3 class="font-semibold">Andi Wijaya</h3>
-                    <p class="text-sm text-gray-500">5 Hari Lalu</p>
-                    <p class="text-sm text-yellow-500">★★★★★</p>
-                </div>
-            </div>
-            <p class="mt-2 text-gray-700">Sebagai mahasiswa, saya merasa kursus ini sangat bermanfaat...</p>
-            <div class="mt-2 flex items-center space-x-2 text-gray-500 text-sm">
-                <span>50 Likes</span>
-                <span>22 Balasan</span>
-                <span>10 Share</span>
-            </div>
-        </div>
-    </div>
-</div> --}}
 
 <script>
-    const playButtons = document.querySelectorAll(".playButton"); // Select all elements with class "playButton"
+    const playButtons = document.querySelectorAll(".playButton");
     const videoOverlay = document.getElementById("videoOverlay");
     const videoFrame = document.getElementById("videoFrame");
     const closeVideo = document.getElementById("closeVideo");
 
-    // Loop through all play buttons and attach click event
     playButtons.forEach(button => {
         button.addEventListener("click", function() {
             const videoId = this.getAttribute("data-video-id");
-            videoFrame.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`; // Set src video
+            videoFrame.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
             videoOverlay.classList.remove("hidden");
         });
     });
 
-    // Menutup iframe saat tombol close diklik
     closeVideo.addEventListener("click", function() {
         videoOverlay.classList.add("hidden");
-        videoFrame.src = ""; // Hentikan video ketika ditutup
+        videoFrame.src = ""; 
     });
 
-    // Pilih semua tombol "toggleArrow"
-const toggleArrows = document.querySelectorAll(".toggleArrow");
+    const toggleArrows = document.querySelectorAll(".toggleArrow");
 
-toggleArrows.forEach(toggle => {
-    toggle.addEventListener("click", function() {
-        const materiId = this.getAttribute("data-materi-id"); // Dapatkan ID materi yang terkait
-        const materiList = document.getElementById(`materiList${materiId}`);
-        const arrowIcon = document.getElementById(`arrowIcon${materiId}`);
+    toggleArrows.forEach(toggle => {
+        toggle.addEventListener("click", function() {
+            const materiId = this.getAttribute("data-materi-id");
+            const materiList = document.getElementById(`materiList${materiId}`);
+            const arrowIcon = document.getElementById(`arrowIcon${materiId}`);
 
-        // Tutup semua materi lain
-        toggleArrows.forEach(otherToggle => {
-            const otherId = otherToggle.getAttribute("data-materi-id");
-            if (otherId !== materiId) {
-                document.getElementById(`materiList${otherId}`).classList.add("hidden");
-                document.getElementById(`arrowIcon${otherId}`).classList.remove("rotate");
-            }
+            toggleArrows.forEach(otherToggle => {
+                const otherId = otherToggle.getAttribute("data-materi-id");
+                if (otherId !== materiId) {
+                    document.getElementById(`materiList${otherId}`).classList.add("hidden");
+                    document.getElementById(`arrowIcon${otherId}`).classList.remove("rotate");
+                }
+            });
+
+            materiList.classList.toggle("hidden");
+            arrowIcon.classList.toggle("rotate");
         });
-
-        // Toggle hidden class on the current list
-        materiList.classList.toggle("hidden");
-
-        // Toggle rotate class on the current arrow icon
-        arrowIcon.classList.toggle("rotate");
     });
-});
 
 </script>
 
 <style>
-    /* CSS untuk rotasi icon */
     .rotate {
-        transform: rotate(180deg); /* Rotasi 180 derajat */
+        transform: rotate(180deg);
     }
     #videoOverlay {
         z-index: 1000; 

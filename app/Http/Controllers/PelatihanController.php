@@ -14,9 +14,16 @@ class PelatihanController extends Controller
         ]);
     }
 
-    public function detail_pelatihan()
+    public function pelatihan_online()
     {
-        return view('pelatihan.detail-pelatihan')->with([
+        return view('pelatihan.pelatihan-online')->with([
+            'title' => 'Detail Pelatihan | RevoEnergy.',
+        ]);
+    }
+
+    public function pelatihan_offline()
+    {
+        return view('pelatihan.pelatihan-offline')->with([
             'title' => 'Detail Pelatihan | RevoEnergy.',
         ]);
     }

@@ -31,4 +31,5 @@ Route::get('/artikel', [ArtikelController::class, 'index']);
 Route::get('/detail_forum', [ForumController::class, 'detail']);
 Route::get('/detail_artikel', [ArtikelController::class, 'detail']);
 Route::get('/pelatihan', [PelatihanController::class, 'pelatihan']);
-Route::get('/detail-pelatihan', [PelatihanController::class, 'detail_pelatihan']);
+Route::get('/pelatihan-online', [PelatihanController::class, 'pelatihan_online']);
+Route::get('/pelatihan-offline', [PelatihanController::class, 'pelatihan_offline']);
