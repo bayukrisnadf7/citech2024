@@ -15,6 +15,9 @@ export default {
             boxShadow: {
                 "0" : "rgba(149, 157, 165, 0.2) 0px 8px 24px",
                 "1" : "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+                "6" : "rgba(99, 99, 99, 0.2) 0px 2px 8px 0px",
+                "11" : "rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px",
+                "19" : "rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
             },
             fontFamily: {
                 poppins: "Poppins, sans-serif",

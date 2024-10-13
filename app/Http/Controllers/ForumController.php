@@ -11,9 +11,4 @@ class ForumController extends Controller
             'title' => 'Forum | RevoEnergy.',
         ]);
     }
-    public function detail(){
-        return view('detail_forum.index')->with([
-            'title' => 'Detail Forum | RevoEnergy.',
-        ]);
-    }
 }
