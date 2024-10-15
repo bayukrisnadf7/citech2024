@@ -11,7 +11,7 @@
                         kebutuhan listrik
                         sehari-hari, dan berapa lama pengembalian investasi dari biaya instalasi?</p>
                 </div> --}}
-                    <img src="img/detail-artikel-1.png" alt="" class="mt-5">
+                    <img src="img/detail-artikel-1.png" alt="">
                     <p class="font-bold text-4xl mt-5">
                         Pemanfaatan Limbah Sampah Menjadi Energi
                     </p>

@@ -4,7 +4,8 @@
         <div class="flex w-full gap-3">
             <div class="relative w-full">
                 <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
-                <input type="text" placeholder="Cari Artikel" class="border p-3 px-10 w-full rounded-lg">
+                <input id="searchInput" type="text" placeholder="Cari Artikel" class="border p-3 px-10 w-full rounded-lg">
+
             </div>
             <select class="border rounded-md p-3">
                 <option>Terbaru</option>
@@ -77,17 +78,34 @@
             <div class="border w-full p-5 rounded-xl">
                 <p>Tag</p>
                 <div class="grid grid-cols-3 gap-5 mt-3">
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#panelsurya</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#gogreen</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#infoterkini</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#renewables</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#cleanenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#solarpower</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#windenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#fossilfree</p>
-                    <p class="bg-slate-300 p-1 rounded-full text-center">#sustainable</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#panelsurya</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#gogreen</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#infoterkini</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#renewables</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#cleanenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#solarpower</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#windenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#fossilfree</p>
+                    <p class="bg-slate-300 p-1 rounded-full text-center cursor-pointer tag">#sustainable</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        // Ambil semua elemen dengan kelas 'tag'
+        const tags = document.querySelectorAll('.tag');
+        const searchInput = document.getElementById('searchInput');
+    
+        // Tambahkan event listener untuk setiap tag
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                // Ambil teks tag yang diklik
+                const tagText = this.textContent.trim();
+                // Masukkan teks tag ke dalam input pencarian
+                searchInput.value = tagText;
+            });
+        });
+    </script>
+    
 @endsection
