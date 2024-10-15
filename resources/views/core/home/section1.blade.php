@@ -18,7 +18,7 @@
             berkelanjutan!
         </div>
         <div class="--button">
-            <button class="px-4 py-2 bg-black text-white rounded-full text-[14px] font-medium shadow-1">
+            <button class="px-4 py-2 bg-black text-white rounded-full text-[14px] font-medium shadow-1" onclick="window.location.href='/produk'">
                 Produk Kami <i class="bi bi-arrow-right"></i>
             </button>
         </div>
