@@ -9,15 +9,11 @@
                 <p>Alamat Pengiriman</p>
                 <div class="flex gap-2 mt-2">
                     <i class="fa-solid fa-location-dot mt-1"></i>
-                    <p>Jl. Nangka, Kec. Patrang, Kabupaten Jember, Jawa Timur, 68111 , Patrang, Kab. Jember, Jawa Timur, 62895399757207</p>
+                    <p>Jl. Nangka, Kec. Patrang, Kabupaten Jember, Jawa Timur, 68111 , Patrang, Kab. Jember, Jawa Timur,
+                        62895399757207</p>
                 </div>
             </div>
             <div class="border p-5 rounded-xl mt-5 max-h-max relative group">
-                <div class="absolute top-2 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button id="deleteButton" class="text-red-500">
-                        <i class="fa fa-trash"></i> <!-- Ganti dengan ikon trash sesuai kebutuhan -->
-                    </button>
-                </div>
                 <div class="flex gap-5">
                     <img id="productImage" width="120">
                     <div class="flex flex-col">
@@ -40,10 +36,10 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="border p-5 w-1/4 rounded-xl mt-5 max-h-max">
             <p>Ringkasan belanja</p>
-            
+
             <div class="flex justify-between mt-2">
                 <p>Biaya Pengiriman</p>
                 <p id="shippingCost">Rp. 0</p> <!-- Tempat untuk biaya pengiriman -->
@@ -57,21 +53,40 @@
     </div>
 
     <!-- Modal untuk ringkasan biaya -->
-    <div id="paymentModal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="paymentModalLabel" aria-hidden="true">
+    <div id="paymentModal" class="fixed z-10 inset-0 overflow-y-auto hidden" aria-labelledby="paymentModalLabel"
+        aria-hidden="true">
         <div class="flex items-center justify-center min-h-screen px-4 text-center">
             <div class="fixed inset-0 bg-black opacity-50"></div>
             <div class="inline-block w-full max-w-md p-6 my-8 bg-white rounded-lg shadow-lg z-20">
-                <p class="text-start">Pembayaran</p>
-                <h5 class="mb-4 text-lg font-medium text-gray-900" id="paymentModalLabel">Ringkasan Pembayaran</h5>
-                <p id="modalShippingCost">Biaya Pengiriman: Rp. 0</p>
-                <p id="modalTotalPrice">Total: Rp. 0</p>
+                <p class="text-start font-bold">Pembayaran</p>
+                <!-- Daftar metode pembayaran -->
+                <div class="mt-4">
+                    <select id="paymentMethod" class="mt-1 border rounded w-full p-2">
+                        <option value="">Pilih Metode Pembayaran</option>
+                        <option value="bankTransfer">Transfer Bank</option>
+                        <option value="creditCard">Gopay</option>
+                        <option value="eWallet">E-Wallet</option>
+                    </select>
+                </div>
+                <h5 class="mb-2text-lg font-medium text-gray-900 text-start mt-5" id="paymentModalLabel">Ringkasan
+                    Pembayaran
+                </h5>
+                <div class="text-start mt-2">
+                    <p id="modalShippingCost">Biaya Pengiriman: Rp. 0</p>
+                    <p id="modalTotalPrice">Total: Rp. 0</p>
+                </div>
+
+
+
                 <div class="mt-6 flex justify-end">
                     <button type="button" class="mr-2 text-gray-500 hover:text-gray-700" id="closeModal">Tutup</button>
-                    <button id="confirmPayment" type="button" class="bg-blue-500 text-white px-4 py-2 rounded">Konfirmasi Pembayaran</button>
+                    <button id="confirmPayment" type="button"
+                        class="bg-primary text-white px-4 py-2 rounded">Bayar</button>
                 </div>
             </div>
         </div>
     </div>
+
 
     <script>
         // Biaya pengiriman berdasarkan opsi
@@ -158,6 +173,13 @@
             document.getElementById('summaryTotalPrice').innerText = '';
             document.getElementById('shippingCost').innerText = 'Rp. 0';
             alert('Produk berhasil dihapus dari keranjang.');
+        });
+    </script>
+    <script>
+        document.getElementById('confirmPayment').addEventListener('click', function() {
+            alert('Silahkan lanjut pada pembayaran!');
+            // Alihkan pengguna ke halaman /produk
+            window.location.href = '/produk';
         });
     </script>
 @endsection

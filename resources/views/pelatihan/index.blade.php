@@ -129,7 +129,7 @@
                     
                     <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
 
-                    <div class="flex justify-between items-center mt-10">
+                    <div class="flex justify-between items-center mt-11">
                         <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                             <p class="text-sm text-black font-medium">Offline</p>
                         </div>

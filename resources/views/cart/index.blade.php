@@ -45,7 +45,7 @@
 
     <script>
         // Mengambil data dari localStorage
-        const productData = localStorage.getItem('checkoutProduct');
+        const productData = localStorage.getItem('cartProduct');
 
         // Jika data ditemukan di localStorage
         if (productData) {
@@ -68,7 +68,7 @@
         // Event listener untuk tombol hapus
         document.getElementById('deleteButton').addEventListener('click', function() {
             // Hapus data dari localStorage
-            localStorage.removeItem('checkoutProduct');
+            localStorage.removeItem('cartProduct');
             // Perbarui tampilan
             document.getElementById('productName').innerText = '';
             document.getElementById('productPrice').innerText = '';

@@ -35,29 +35,30 @@
         </a>
     </ul>
     <div class="flex gap-3 items-center">
-        <!-- Kondisi untuk mengganti icon search menjadi icon cart -->
-        @if(request()->is('produk'))
-        <a href="/cart">
-            <i class="fa-solid fa-cart-shopping bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
-        </a>
-        @elseif(request()->is('detail_produk'))
-        <a href="/cart">
-            <i class="fa-solid fa-cart-shopping bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
-        </a>
+        @if (request()->is('produk') || request()->is('detail_produk'))
+            <a href="/cart">
+                <i class="fa-solid fa-cart-shopping bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
+            </a>
         @else
-            <i data-modal-target="search-modal" data-modal-toggle="search-modal" class="fa-solid fa-magnifying-glass bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
+            <i data-modal-target="search-modal" data-modal-toggle="search-modal"
+                class="fa-solid fa-magnifying-glass bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
         @endif
-        <button onclick="window.location.href='/member'" class="p-3 rounded-full flex gap-2 items-center bg-[#171717] text-white text-[14px] font-medium">
-            <div class="--icon"><img src="{{ asset('img/circle-bolt.png') }}" class="w-[20px] h-[20px] bg-cover" alt=""></div>
+        <button onclick="window.location.href='/member'"
+            class="p-3 rounded-full flex gap-2 items-center bg-[#171717] text-white text-[14px] font-medium">
+            <div class="--icon">
+                <img src="{{ asset('img/circle-bolt.png') }}" class="w-[20px] h-[20px] bg-cover" alt="">
+            </div>
             <span>Upgrade</span>
         </button>
-       <div class="--images flex items-center gap-2 cursor-pointer">
-        <div class="rounded-full overflow-hidden p-[2px] border-[2.5px] border-primary">
-            <div class="--bordered rounded-full">
-                <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full" alt="">
+        <div class="--images flex items-center gap-2 cursor-pointer relative">
+            <div class="rounded-full overflow-hidden p-[2px] border-[2.5px] border-primary">
+                <div class="--bordered rounded-full">
+                    <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full" alt="">
+                </div>
+            </div>
+            <div class="--icon">
+                <i class="bi bi-chevron-down text-[24px] font-bold"></i>
             </div>
         </div>
-        <div class="--icon"><i class="bi bi-chevron-down text-[24px] font-bold"></i></div>
-       </div>
     </div>
 </div>
