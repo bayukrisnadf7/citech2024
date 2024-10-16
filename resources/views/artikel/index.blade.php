@@ -96,7 +96,7 @@
         // Ambil semua elemen dengan kelas 'tag'
         const tags = document.querySelectorAll('.tag');
         const searchInput = document.getElementById('searchInput');
-    
+
         // Tambahkan event listener untuk setiap tag
         tags.forEach(tag => {
             tag.addEventListener('click', function() {
@@ -107,5 +107,5 @@
             });
         });
     </script>
-    
+
 @endsection
