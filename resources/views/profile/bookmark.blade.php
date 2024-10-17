@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    <div class="--container mt-12 px-80">
+    <div class="--container mt-12 px-60">
         <div class="--heading text-2xl text-[#171717] font-medium relative w-fit">
             Pengaturan Akun
             <img src="{{ asset('img/flow2.png') }}" class="w-full absolute top-ful left-0" alt="">

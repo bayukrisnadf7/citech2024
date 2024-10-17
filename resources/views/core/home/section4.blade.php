@@ -109,11 +109,10 @@
         <div class="--card komponen-alat hidden">
             <div class="--images"><img src="{{ asset('img/komponen-alat-1-home.png') }}"
                     class="w-full object-cover aspect-[1/1] rounded-[20px]" alt=""></div>
-            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">ROMAN Solar Panel Portable 10W 4 Folding
-                Charging Board</div>
+            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">Krissil Acetoxy Silicone Sealant Lem Kaca</div>
             <div class="--harga text-[24px] font-black mt-2 text-black">Rp. 220.000,00</div>
             <div class="--kategori-stok flex items-center gap-2 mt-2">
-                <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Jadi</div>
+                <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Mentah</div>
                 <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 100 Produk</div>
             </div>
             <div class="--rating-terjualdanulasan mt-2 flex items-center gap-2">
@@ -128,11 +127,11 @@
         <div class="--card komponen-alat hidden">
             <div class="--images"><img src="{{ asset('img/komponen-alat-2-home.png') }}"
                     class="w-full object-cover aspect-[1/1] rounded-[20px]" alt=""></div>
-            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">ROMAN Solar Panel Portable 10W 4 Folding
-                Charging Board</div>
+            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">12v 100ah Lifepo4 Baterai Lithium BMS Battery Rechargeable Garansi
+                10 Tahun Cst energy Brand</div>
             <div class="--harga text-[24px] font-black mt-2 text-black">Rp. 220.000,00</div>
             <div class="--kategori-stok flex items-center gap-2 mt-2">
-                <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Jadi</div>
+                <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Mentah</div>
                 <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 100 Produk</div>
             </div>
             <div class="--rating-terjualdanulasan mt-2 flex items-center gap-2">

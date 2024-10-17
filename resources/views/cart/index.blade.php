@@ -1,10 +1,10 @@
 @extends('main')
 @section('content')
-    <!-- Elemen HTML untuk menampilkan data produk -->
     <p class="font-bold text-2xl mt-10 mx-24">Keranjang</p>
 
     <div class="flex gap-10 justify-center">
         <div class="flex flex-col w-3/5">
+            <!-- Produk Section -->
             <div class="border p-5 rounded-xl mt-5 max-h-max">
                 <div class="flex items-center justify-between">
                     <div class="flex gap-5 items-center">
@@ -14,10 +14,10 @@
                     <button class="text-primary font-bold">Hapus</button>
                 </div>
             </div>
-            <div class="border p-5 rounded-xl mt-5 max-h-max relative group">
+            <div class="border p-5 rounded-xl mt-5 max-h-max relative group" id="productCard">
                 <div class="absolute top-2 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button id="deleteButton" class="text-red-500">
-                        <i class="fa fa-trash"></i> <!-- Ganti dengan ikon trash sesuai kebutuhan -->
+                    <button id="deleteProductButton" class="text-red-500">
+                        <i class="fa fa-trash"></i>
                     </button>
                 </div>
                 <div class="flex gap-5">
@@ -27,6 +27,22 @@
                         <p id="productPrice"></p>
                         <p id="productQuantity"></p>
                         <p id="totalProductPrice"></p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pelatihan Section -->
+            <div class="border p-5 rounded-xl mt-5 max-h-max relative group" id="pelatihanCard">
+                <div class="absolute top-2 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <button id="deletePelatihanButton" class="text-red-500">
+                        <i class="fa fa-trash"></i>
+                    </button>
+                </div>
+                <div class="flex gap-5">
+                    <img id="pelatihanImage" width="120">
+                    <div class="flex flex-col">
+                        <h1 id="pelatihanName"></h1>
+                        <p id="pelatihanPrice"></p>
                     </div>
                 </div>
             </div>
@@ -40,43 +56,51 @@
             </div>
             <button onclick="location.href='/pengiriman'" class="bg-primary text-white p-2 rounded-lg mt-10 w-full">Beli</button>
         </div>
-
     </div>
 
     <script>
         // Mengambil data dari localStorage
-        const productData = localStorage.getItem('checkoutProduct');
+        const productData = localStorage.getItem('cartProduct');
+        const pelatihanData = localStorage.getItem('cartPelatihan');
 
-        // Jika data ditemukan di localStorage
+        // Mengisi data produk
         if (productData) {
-            // Parse data dari string menjadi objek
             const product = JSON.parse(productData);
-            // Memasukkan data produk ke dalam elemen HTML
+            document.getElementById('productCard').style.display = 'block';
             document.getElementById('productName').innerText = product.name;
             document.getElementById('productPrice').innerText = `Harga: Rp. ${product.price.toLocaleString()}`;
             document.getElementById('totalProductPrice').innerText = `Total: Rp. ${product.subtotal.toLocaleString()}`;
             document.getElementById('productQuantity').innerText = `Jumlah: ${product.quantity}`;
             document.getElementById('productImage').src = product.image;
-
-            // Setel total di ringkasan belanja
             document.getElementById('summaryTotalPrice').innerText = `Rp. ${product.subtotal.toLocaleString()}`;
         } else {
-            // Jika tidak ada data di localStorage
-            console.log('No product data found in localStorage.');
+            document.getElementById('productCard').style.display = 'none';
         }
 
-        // Event listener untuk tombol hapus
-        document.getElementById('deleteButton').addEventListener('click', function() {
-            // Hapus data dari localStorage
-            localStorage.removeItem('checkoutProduct');
-            // Perbarui tampilan
-            document.getElementById('productName').innerText = '';
-            document.getElementById('productPrice').innerText = '';
-            document.getElementById('totalProductPrice').innerText = '';
-            document.getElementById('productQuantity').innerText = '';
-            document.getElementById('productImage').src = '';
-            document.getElementById('summaryTotalPrice').innerText = '';
+        // Mengisi data pelatihan
+        if (pelatihanData) {
+            const pelatihan = JSON.parse(pelatihanData);
+            document.getElementById('pelatihanCard').style.display = 'block';
+            document.getElementById('pelatihanName').innerText = pelatihan.name;
+            document.getElementById('pelatihanImage').src = pelatihan.image;
+            document.getElementById('pelatihanPrice').innerText = `Harga: Rp. ${pelatihan.price.toLocaleString()}`;
+            document.getElementById('summaryTotalPrice').innerText = `Rp. ${pelatihan.price.toLocaleString()}`;
+        } else {
+            document.getElementById('pelatihanCard').style.display = 'none';
+        }
+
+        // Hapus produk
+        document.getElementById('deleteProductButton').addEventListener('click', function() {
+            localStorage.removeItem('cartProduct');
+            document.getElementById('productCard').style.display = 'none';
             alert('Produk berhasil dihapus dari keranjang.');
+        });
+
+        // Hapus pelatihan
+        document.getElementById('deletePelatihanButton').addEventListener('click', function() {
+            localStorage.removeItem('cartPelatihan');
+            document.getElementById('pelatihanCard').style.display = 'none';
+            alert('Pelatihan berhasil dihapus dari keranjang.');
         });
     </script>
 @endsection

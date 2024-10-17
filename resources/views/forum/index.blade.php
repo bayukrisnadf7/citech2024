@@ -10,8 +10,7 @@
             </div>
             <select class="border rounded-md p-3">
                 <option>Terbaru</option>
-                <option>Harga Terendah</option>
-                <option>Harga Tertinggi</option>
+                <option>Terlama</option>
             </select>
         </div>
     </div>
@@ -164,15 +163,49 @@
         // Ambil semua elemen dengan kelas 'tag'
         const tags = document.querySelectorAll('.tag');
         const searchInput = document.getElementById('searchInput');
-    
+
         // Tambahkan event listener untuk setiap tag
         tags.forEach(tag => {
-            tag.addEventListener('click', function() {
+            tag.addEventListener('click', function(event) {
+                event.stopPropagation(); // Prevent event bubbling
                 // Ambil teks tag yang diklik
                 const tagText = this.textContent.trim();
                 // Masukkan teks tag ke dalam input pencarian
                 searchInput.value = tagText;
+                filterForumPosts(); // Jalankan pencarian saat tag diklik
             });
+        });
+
+        // Ambil elemen input pencarian dan daftar forum
+        const forumPosts = document.querySelectorAll('.border'); // Select all forum posts
+
+        // Fungsi untuk menjalankan pencarian
+        function filterForumPosts() {
+            const query = searchInput.value.toLowerCase().trim();
+
+            // Loop melalui setiap forum post dan cek apakah sesuai dengan pencarian
+            forumPosts.forEach(post => {
+                const postContent = post.querySelector('div.mt-4 p').textContent.toLowerCase(); // Get the content of each post
+                const postAuthor = post.querySelector('div.flex > p:first-child').textContent.toLowerCase(); // Get the author name
+
+                // Cek apakah query ada di dalam konten atau nama penulis
+                if (postContent.includes(query) || postAuthor.includes(query)) {
+                    post.style.display = 'block'; // Tampilkan post jika cocok
+                } else {
+                    post.style.display = 'none'; // Sembunyikan post jika tidak cocok
+                }
+            });
+        }
+
+        // Event listener untuk input pencarian (real-time)
+        searchInput.addEventListener('input', filterForumPosts);
+
+        // Tambahkan event listener untuk mendeteksi tombol "Enter"
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Mencegah form submit jika ada
+                filterForumPosts(); // Jalankan pencarian
+            }
         });
     </script>
 @endsection
