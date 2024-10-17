@@ -14,7 +14,8 @@
             </li>
         </a>
         <a href="/pelatihan">
-            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('pelatihan') ? 'bg-white' : '' }}">
+            <li
+                class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('pelatihan') ? 'bg-white' : '' }}">
                 Pelatihan
             </li>
         </a>
@@ -24,18 +25,24 @@
             </li>
         </a>
         <a href="/artikel">
-            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('artikel') ? 'bg-white' : '' }}">
+            <li
+                class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('artikel') ? 'bg-white' : '' }}">
                 Artikel
             </li>
         </a>
         <a href="/tentang">
-            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang') ? 'bg-white' : '' }}">
+            <li
+                class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang') ? 'bg-white' : '' }}">
                 Tentang
             </li>
         </a>
     </ul>
     <div class="flex gap-3 items-center">
         @if (request()->is('produk') || request()->is('detail_produk'))
+            <a href="/cart">
+                <i class="fa-solid fa-cart-shopping bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
+            </a>
+        @elseif(request()->is('pelatihan') || request()->is('pelatihan-offline') || request()->is('pelatihan-online'))
             <a href="/cart">
                 <i class="fa-solid fa-cart-shopping bg-[#f1f1f1] p-4 rounded-full cursor-pointer"></i>
             </a>
@@ -53,7 +60,8 @@
         <div class="--images flex items-center gap-2 cursor-pointer relative">
             <div class="rounded-full overflow-hidden p-[2px] border-[2.5px] border-primary">
                 <div class="--bordered rounded-full">
-                    <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full" alt="">
+                    <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full"
+                        alt="">
                 </div>
             </div>
             <div class="--icon">

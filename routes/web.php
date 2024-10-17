@@ -8,6 +8,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\ArtikelController;
 use App\Http\Controllers\PelatihanController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('home.home', [
@@ -29,4 +30,15 @@ Route::get('/cart', [ProdukController::class, 'cart']);
 Route::get('/pengiriman', [ProdukController::class, 'pengiriman']);
 Route::get('/pelatihan-online', [PelatihanController::class, 'pelatihan_online']);
 Route::get('/pelatihan-offline', [PelatihanController::class, 'pelatihan_offline']);
-    
+
+Route::prefix('profile')->group(function () {
+    Route::get('/', [UserController::class, 'index'])->name(name: 'profile.index');
+    Route::get('/riwayat-transaksi', [UserController::class, 'riwayatTransaksi'])->name('profile.riwayat_transaksi');
+    Route::get('/pelatihan-diikuti', [UserController::class, 'pelatihanDiikuti'])->name('profile.pelatihan_diikuti');
+    Route::get('/point-ewallet', [UserController::class, 'pointEwallet'])->name('profile.point_ewallet');
+    Route::get('/ubah-password', [UserController::class, 'ubahPassword'])->name('profile.ubah_password');
+    Route::get('/kelola-artikel', [UserController::class, 'kelolaArtikel'])->name('profile.kelola_artikel');
+    Route::get('/pertanyaan-forum', [UserController::class, 'pertanyaanForum'])->name('profile.pertanyaan_forum');
+    Route::get('/jawaban-forum', [UserController::class, 'jawabanForum'])->name('profile.jawaban_forum');
+    Route::get('/bookmark', [UserController::class, 'bookmark'])->name('profile.bookmark');
+});

@@ -115,10 +115,34 @@
         </div>
     </div>
     <script>
-        // Ambil elemen select
-        const sortSelect = document.querySelector('select');
+        const searchInput = document.getElementById('searchInput');
+        const articles = document.querySelectorAll('.article');
 
-        // Fungsi untuk menyortir artikel berdasarkan tanggal
+        function filterArticles() {
+            const query = searchInput.value.toLowerCase().trim();
+
+            articles.forEach(article => {
+                const articleTitle = article.querySelector('p.font-bold').textContent.toLowerCase();
+                const articleContent = article.querySelector('p.line-clamp-3').textContent.toLowerCase();
+
+                if (articleTitle.includes(query) || articleContent.includes(query)) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+
+        searchInput.addEventListener('input', filterArticles);
+
+        searchInput.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                filterArticles();
+            }
+        });
+
+        const sortSelect = document.querySelector('select');
         function sortArticles(order) {
             const articleList = document.getElementById('articleList');
             const articlesArray = Array.from(articles);
@@ -127,56 +151,19 @@
                 const dateA = new Date(a.querySelector('p.text-secondary').textContent);
                 const dateB = new Date(b.querySelector('p.text-secondary').textContent);
 
-                return order === 'Terlama' ? dateA - dateB : dateB - dateA; // Sorting berdasarkan pilihan
+                return order === 'Terlama' ? dateA - dateB : dateB - dateA;
             });
 
-            // Menghapus artikel yang lama
             articleList.innerHTML = '';
-
-            // Menambahkan artikel yang sudah disortir
             articlesArray.forEach(article => {
                 articleList.appendChild(article);
             });
         }
 
-        // Event listener untuk mengubah pilihan select
         sortSelect.addEventListener('change', function() {
             const selectedOption = this.value;
             sortArticles(selectedOption);
         });
     </script>
-    <script>
-        // Ambil elemen input pencarian dan daftar artikel
-        const searchInput = document.getElementById('searchInput');
-        const articles = document.querySelectorAll('.article');
 
-        // Fungsi untuk menjalankan pencarian
-        function filterArticles() {
-            const query = searchInput.value.toLowerCase().trim();
-
-            // Loop melalui setiap artikel dan cek apakah sesuai dengan pencarian
-            articles.forEach(article => {
-                const articleTitle = article.querySelector('p.font-bold').textContent.toLowerCase();
-                const articleContent = article.querySelector('p.line-clamp-3').textContent.toLowerCase();
-
-                // Cek apakah query ada di dalam judul atau konten artikel
-                if (articleTitle.includes(query) || articleContent.includes(query)) {
-                    article.style.display = 'block'; // Tampilkan artikel jika cocok
-                } else {
-                    article.style.display = 'none'; // Sembunyikan artikel jika tidak cocok
-                }
-            });
-        }
-
-        // Event listener untuk input pencarian (real-time)
-        searchInput.addEventListener('input', filterArticles);
-
-        // Tambahkan event listener untuk mendeteksi tombol "Enter"
-        searchInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Mencegah form submit jika ada
-                filterArticles(); // Jalankan pencarian
-            }
-        });
-    </script>
 @endsection
