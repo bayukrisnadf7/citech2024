@@ -56,8 +56,10 @@
                     <p id="subtotal" class="font-bold text-2xl">Rp. 220.000,00</p>
                 </div>
                 <div class="flex gap-5 mt-5 w-full">
-                    <button id="checkoutButton" class="p-2 bg-secondary rounded-lg text-white text-center w-full">Checkout Produk</button>
-                    <button class="p-2 bg-primary rounded-lg text-white text-center w-full flex items-center justify-center space-x-2">
+                    <button id="checkoutButton" class="p-2 bg-secondary rounded-lg text-white text-center w-full">Checkout
+                        Produk</button>
+                    <button
+                        class="p-2 bg-primary rounded-lg text-white text-center w-full flex items-center justify-center space-x-2">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span>Keranjang</span>
                     </button>
@@ -230,25 +232,30 @@
             </div>
         </div>
     </div>
-
-    {{-- <script>
+    <script>
+        // Fungsi checkout dan simpan ke localStorage
         document.getElementById('checkoutButton').addEventListener('click', function() {
-            // Data produk yang ingin disimpan
             const productData = {
                 name: 'ROMAN Solar Panel Portable 10W 4 Folding Charging Board',
-                price: 990000, // Harga produk
-                quantity: 1, // Jumlah produk, kamu bisa menambahkan logika penghitungan jumlah
-                image: 'img/produk-1.png' // Gambar produk
+                price: pricePerItem,
+                quantity: quantity,
+                subtotal: pricePerItem * quantity,
+                image: 'img/produk-1.png'
             };
 
             // Simpan data ke localStorage
             localStorage.setItem('checkoutProduct', JSON.stringify(productData));
 
-            // Tampilkan pesan atau redirect ke halaman lain jika diperlukan
-            alert('Produk berhasil ditambahkan ke localStorage untuk checkout');
-            // window.location.href = "/checkout";  // Redirect ke halaman checkout
+            // Arahkan ke halaman pengiriman sesuai jumlah yang dibeli
+            window.location.href = `/pengiriman?quantity=${quantity}`;
         });
-    </script> --}}
+
+        // Event listener untuk tombol keranjang
+        document.querySelector('.p-2.bg-primary.flex.items-center.justify-center').addEventListener('click', function() {
+            // Arahkan ke halaman keranjang
+            window.location.href = '/keranjang';
+        });
+    </script>
     <script>
         function showTabContent(tab) {
             // Hapus semua konten yang sedang aktif
@@ -331,7 +338,25 @@
             // Simpan data ke localStorage
             localStorage.setItem('checkoutProduct', JSON.stringify(productData));
 
-            alert('Produk berhasil ditambahkan ke localStorage untuk checkout');
+            // Arahkan ke halaman pengiriman sesuai jumlah yang dibeli
+            window.location.href = `/pengiriman?quantity=${quantity}`;
+        });
+
+        // Event listener untuk tombol keranjang
+        document.querySelector('.p-2.bg-primary.flex.items-center.justify-center').addEventListener('click', function() {
+            const productData = {
+                name: 'ROMAN Solar Panel Portable 10W 4 Folding Charging Board',
+                price: pricePerItem,
+                quantity: quantity,
+                subtotal: pricePerItem * quantity,
+                image: 'img/produk-1.png'
+            };
+
+            // Simpan data ke localStorage
+            localStorage.setItem('cartProduct', JSON.stringify(productData));
+
+            // Arahkan ke halaman keranjang
+            window.location.href = '/cart';
         });
     </script>
 @endsection

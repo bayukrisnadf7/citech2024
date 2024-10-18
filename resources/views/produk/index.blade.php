@@ -60,7 +60,8 @@
                 <div class="flex justify-between items-center mb-6 gap-5 w-full">
                     <div class="relative w-full">
                         <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
-                        <input type="text" placeholder="Cari Nama Barang" class="border p-3 px-10 w-full rounded-lg">
+                        <input id="search-bar" type="text" placeholder="Cari Nama Barang"
+                            class="border p-3 px-10 w-full rounded-lg">
                     </div>
                     <select class="border rounded-md p-3">
                         <option>Terbaru</option>
@@ -71,7 +72,8 @@
                 </div>
             </div>
             <div id="product-list" class="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-8">
-                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.9" data-harga="220000" data-terjual="100">
+                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.9" data-harga="220000"
+                    data-terjual="100">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
                         <a href="/detail_produk">
                             <img src="img/produk-1.png" alt="" width="400">
@@ -96,67 +98,64 @@
                         </a>
                         <div class="flex justify-between">
                             <p></p>
+                            <i id="addToCart" class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full cursor-pointer"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.8" data-harga="1259000"
+                    data-terjual="80">
+                    <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
+                        <img src="img/produk-2.png" alt="" width="400">
+                        <p class="line-clamp-2 mt-3">Pembangkit Listrik Tenaga Surya Portabel Panel Surya 20W Dua sisi
+                            Satu Daya</p>
+                        <p class="font-bold text-xl mt-2">Rp. 1.259.000,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
+                            <p class="text-slate-500">Stok: 80 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.8</p>
+                            </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>80 Terjual</p>
+                                <p>|</p>
+                                <p>Baru</p>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <p></p>
                             <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
                         </div>
                     </div>
                 </div>
-                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.8"
-                    data-harga="1259000" data-terjual="80">
+                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.7" data-harga="1388888"
+                    data-terjual="60">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-2.png" alt="" width="400">
-                            <p class="line-clamp-2 mt-3">Pembangkit Listrik Tenaga Surya Portabel Panel Surya 20W Dua sisi
-                                Satu Daya</p>
-                            <p class="font-bold text-xl mt-2">Rp. 1.259.000,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
-                                <p class="text-slate-500">Stok: 80 Produk</p>
+                        <img src="img/produk-3.png" alt="" width="400">
+                        <p class="line-clamp-2 mt-3">Electric Hoist 600 Kg - Katrol Elektrik Takel Listrik PA600 Wire
+                            Reel
+                        </p>
+                        <p class="font-bold text-xl mt-2">Rp. 1.388.888,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
+                            <p class="text-slate-500">Stok: 60 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.7</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.8</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>80 Terjual</p>
-                                    <p>|</p>
-                                    <p>Baru</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>60 Terjual</p>
+                                <p>|</p>
+                                <p>Baru</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.7"
-                    data-harga="1388888" data-terjual="60">
-                    <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-3.png" alt="" width="400">
-                            <p class="line-clamp-2 mt-3">Electric Hoist 600 Kg - Katrol Elektrik Takel Listrik PA600 Wire
-                                Reel
-                            </p>
-                            <p class="font-bold text-xl mt-2">Rp. 1.388.888,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
-                                <p class="text-slate-500">Stok: 60 Produk</p>
-                            </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.7</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>60 Terjual</p>
-                                    <p>|</p>
-                                    <p>Baru</p>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
                         <div class="flex justify-between">
                             <p></p>
                             <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
@@ -166,158 +165,149 @@
                 <div class="product" data-tipe="Produk Jadi" data-kondisi="Baru" data-rating="4.9"
                     data-harga="11500000" data-terjual="40">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-4.png" alt="" width="400">
-                            <p class="line-clamp-2 mt-3">Genset Inverter 10 KVA 8 KW Tsuzumi TG10000SSI</p>
-                            <p class="font-bold text-xl mt-2">Rp. 11.500.000,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
-                                <p class="text-slate-500">Stok: 40 Produk</p>
+                        <img src="img/produk-4.png" alt="" width="400">
+                        <p class="line-clamp-2 mt-3">Genset Inverter 10 KVA 8 KW Tsuzumi TG10000SSI</p>
+                        <p class="font-bold text-xl mt-2">Rp. 11.500.000,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
+                            <p class="text-slate-500">Stok: 40 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.9</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.9</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>40 Terjual</p>
-                                    <p>|</p>
-                                    <p>Baru</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>40 Terjual</p>
+                                <p>|</p>
+                                <p>Baru</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="flex justify-between">
+                            <p></p>
+                            <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
+                        </div>
+
                     </div>
                 </div>
-                <div class="product" data-tipe="Produk Mentah" data-kondisi="Baru" data-rating="4.9"
-                    data-harga="15500" data-terjual="20">
+                <div class="product" data-tipe="Produk Mentah" data-kondisi="Baru" data-rating="4.9" data-harga="15500"
+                    data-terjual="20">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-5.png" alt="" width="400" class="rounded-2xl">
-                            <p class="line-clamp-2 mt-3">Krissil Acetoxy Silicone Sealant Lem Kaca</p>
-                            <p class="font-bold text-xl mt-2">Rp. 15.500,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Mentah</p>
-                                <p class="text-slate-500">Stok: 20 Produk</p>
+                        <img src="img/produk-5.png" alt="" width="400" class="rounded-2xl">
+                        <p class="line-clamp-2 mt-3">Krissil Acetoxy Silicone Sealant Lem Kaca</p>
+                        <p class="font-bold text-xl mt-2">Rp. 15.500,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Mentah</p>
+                            <p class="text-slate-500">Stok: 20 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.9</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.9</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>20 Terjual</p>
-                                    <p>|</p>
-                                    <p>Baru</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>20 Terjual</p>
+                                <p>|</p>
+                                <p>Baru</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="flex justify-between">
+                            <p></p>
+                            <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="product" data-tipe="Produk Mentah" data-kondisi="Baru" data-rating="4.9"
                     data-harga="450000" data-terjual="30">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-6.png" alt="" width="400">
-                            <p class="line-clamp-2 mt-3">12v 100ah Lifepo4 Baterai Lithium BMS Battery Rechargeable Garansi
-                                10 Tahun Cst energy Brand</p>
-                            <p class="font-bold text-xl mt-2">Rp. 450.000,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Mentah</p>
-                                <p class="text-slate-500">Stok: 20 Produk</p>
+                        <img src="img/produk-6.png" alt="" width="400">
+                        <p class="line-clamp-2 mt-3">12v 100ah Lifepo4 Baterai Lithium BMS Battery Rechargeable Garansi
+                            10 Tahun Cst energy Brand</p>
+                        <p class="font-bold text-xl mt-2">Rp. 450.000,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Mentah</p>
+                            <p class="text-slate-500">Stok: 20 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.8</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.8</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>30 Terjual</p>
-                                    <p>|</p>
-                                    <p>Baru</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>30 Terjual</p>
+                                <p>|</p>
+                                <p>Baru</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="flex justify-between">
+                            <p></p>
+                            <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="product" data-tipe="Produk Jadi" data-kondisi="Second" data-rating="4.9"
                     data-harga="6054000" data-terjual="15">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-7.png" alt="">
-                            <p class="line-clamp-2 mt-3">Zamdon Solar Inverter Frekuensi Rendah Off grid hybrid dengan WiFi
-                                Monitor 3.75KVA 3KW 48V LFT 30248 Wifi</p>
-                            <p class="font-bold text-xl mt-2">Rp. 6.054.000,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
-                                <p class="text-slate-500">Stok: 20 Produk</p>
+                        <img src="img/produk-7.png" alt="">
+                        <p class="line-clamp-2 mt-3">Zamdon Solar Inverter Frekuensi Rendah Off grid hybrid dengan WiFi
+                            Monitor 3.75KVA 3KW 48V LFT 30248 Wifi</p>
+                        <p class="font-bold text-xl mt-2">Rp. 6.054.000,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
+                            <p class="text-slate-500">Stok: 20 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.7</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.7</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>15 Terjual</p>
-                                    <p>|</p>
-                                    <p>Second</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>15 Terjual</p>
+                                <p>|</p>
+                                <p>Second</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="flex justify-between">
+                            <p></p>
+                            <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="product" data-tipe="Produk Jadi" data-kondisi="Second" data-rating="4.9"
                     data-harga="269000" data-terjual="45">
                     <div class="bg-slate-50 shadow p-3 max-w-64 rounded-3xl">
-                        <a href="/detail_produk">
-                            <img src="img/produk-8.png" alt="" width="400">
-                            <p class="line-clamp-2 mt-3">Susan Inverter 12V 9999000W Konverter Booster Tabung Besar 14
-                                Tabung Daya Tinggi Konverter Tegangan Tinggi Pintar Hemat Daya</p>
-                            <p class="font-bold text-xl mt-2">Rp. 269.000,00</p>
-                            <div class="flex text-xs gap-3 mt-2 items-center">
-                                <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
-                                <p class="text-slate-500">Stok: 20 Produk</p>
+                        <img src="img/produk-8.png" alt="" width="400">
+                        <p class="line-clamp-2 mt-3">Susan Inverter 12V 9999000W Konverter Booster Tabung Besar 14
+                            Tabung Daya Tinggi Konverter Tegangan Tinggi Pintar Hemat Daya</p>
+                        <p class="font-bold text-xl mt-2">Rp. 269.000,00</p>
+                        <div class="flex text-xs gap-3 mt-2 items-center">
+                            <p class="bg-tertiary p-1 w-28 text-center font-bold rounded-full">Produk Jadi</p>
+                            <p class="text-slate-500">Stok: 20 Produk</p>
+                        </div>
+                        <div class="flex items-center gap-2 mt-2 text-xs">
+                            <div class="flex justify-center items-center gap-1">
+                                <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
+                                <p>4.9</p>
                             </div>
-                            <div class="flex items-center gap-2 mt-2 text-xs">
-                                <div class="flex justify-center items-center gap-1">
-                                    <i class="fa-solid fa-star" style="color: #FFD43B;"></i>
-                                    <p>4.9</p>
-                                </div>
-                                <div class="flex justify-center items-center gap-1">
-                                    <p>|</p>
-                                    <p>45 Terjual</p>
-                                    <p>|</p>
-                                    <p>Second</p>
-                                </div>
+                            <div class="flex justify-center items-center gap-1">
+                                <p>|</p>
+                                <p>45 Terjual</p>
+                                <p>|</p>
+                                <p>Second</p>
                             </div>
-                            <div class="flex justify-between">
-                                <p></p>
-                                <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
-                            </div>
-                        </a>
+                        </div>
+                        <div class="flex justify-between">
+                            <i class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full"></i>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
     <script>
@@ -406,5 +396,29 @@
                 productGrid.appendChild(product);
             });
         }
+    </script>
+    <script>
+        document.getElementById('addToCart').addEventListener('click', function() {
+            // Ambil elemen produk
+            const productElement = this.closest('.product');
+    
+            // Buat objek produk berdasarkan data yang ada
+            const product = {
+                price: productElement.getAttribute('data-harga'),
+                name: productElement.querySelector('p').innerText,
+                image: productElement.querySelector('img').src,
+                quantity: 1,
+                subtotal: 220000
+            };
+    
+            // Simpan produk ke local storage
+            localStorage.setItem('cartProduct', JSON.stringify(product));
+    
+            // Tampilkan notifikasi atau pesan sukses
+            alert('Produk berhasil ditambahkan ke keranjang!');
+    
+            // Arahkan ke halaman /cart
+            window.location.href = '/cart';
+        });
     </script>
 @endsection
