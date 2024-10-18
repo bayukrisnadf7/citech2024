@@ -156,7 +156,7 @@
             <p class="font-bold text-[38px]">Tim Pengembang RevoEnergy.</p>
             <div class="mt-8 grid grid-cols-4 gap-4">
                 <div class="">
-                    <div class="relative w-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
+                    <div class="relative w-full h-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
                         <div
                             class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                             <img src="{{ asset('img/20230716_202926.jpg') }}" alt="card-image"
@@ -183,7 +183,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <div class="relative w-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
+                    <div class="relative w-full h-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
                         <div
                             class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                             <img src="{{ asset('img/20230716_202926.jpg') }}" alt="card-image"
@@ -210,7 +210,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <div class="relative w-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
+                    <div class="relative w-full h-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
                         <div
                             class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                             <img src="{{ asset('img/20230716_202926.jpg') }}" alt="card-image"
@@ -237,7 +237,7 @@
                     </div>
                 </div>
                 <div class="">
-                    <div class="relative w-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
+                    <div class="relative w-full h-full flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl">
                         <div
                             class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                             <img src="{{ asset('img/20230716_202926.jpg') }}" alt="card-image"
