@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TentangKamiController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
@@ -30,6 +31,7 @@ Route::get('/cart', [ProdukController::class, 'cart']);
 Route::get('/pengiriman', [ProdukController::class, 'pengiriman']);
 Route::get('/pelatihan-online', [PelatihanController::class, 'pelatihan_online']);
 Route::get('/pelatihan-offline', [PelatihanController::class, 'pelatihan_offline']);
+Route::get('/tentang-kami', [TentangKamiController::class, 'index'])->name('tentang_kami.index');
 
 Route::prefix('profile')->group(function () {
     Route::get('/', [UserController::class, 'index'])->name(name: 'profile.index');
