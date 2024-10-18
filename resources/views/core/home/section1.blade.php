@@ -33,7 +33,7 @@
             </div>
             <div class="relative">
                 <img src="{{ asset('img/Frame 25.png') }}" oncontextmenu="return false;" class="w-full object-contain" draggable="false" alt="">
-                <a href="#" class="absolute bottom-0 right-0 w-[140px] h-[45px]"></a>
+                <a href="/pelatihan" class="absolute bottom-0 right-0 w-[140px] h-[45px]"></a>
             </div>
             <div
                 class="--card2 hidden w-full bg-gradient-to-l from-[#D1F16A] to-[#f1f1f1] from-[70%] to-[30%] rounded-[30px] relative flex-col justify-between">

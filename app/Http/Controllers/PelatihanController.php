@@ -32,4 +32,9 @@ class PelatihanController extends Controller
             'title' => 'Detail Pelatihan | RevoEnergy.',
         ]);
     }
+    public function cart(){
+        return view('cart-pelatihan.index')->with([
+            'title' => 'Cart Pelatihan | RevoEnergy.',
+        ]);
+    }
 }

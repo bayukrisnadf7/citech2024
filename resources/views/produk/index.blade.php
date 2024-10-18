@@ -418,7 +418,7 @@
             alert('Produk berhasil ditambahkan ke keranjang!');
     
             // Arahkan ke halaman /cart
-            window.location.href = '/cart';
+            window.location.href = '/cart-produk';
         });
     </script>
 @endsection

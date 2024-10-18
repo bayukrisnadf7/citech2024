@@ -22,6 +22,7 @@
                     teraik dan teman satu kelas.</p>
                 <div class="--button">
                     <button
+                        onclick="window.location.href='/pelatihan'"
                         class="p-2 bg-black text-white rounded-full text-[14px] font-medium shadow-1 flex items-center gap-2">
                         Daftar/Konsultasi <div
                             class="min-w-[20px] min-h-[20px] w-[40px] h-[40px] flex justify-center items-center bg-white p-2 rounded-full">

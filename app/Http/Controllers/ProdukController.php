@@ -17,13 +17,13 @@ class ProdukController extends Controller
         ]);
     }
     public function cart(){
-        return view('cart.index')->with([
-            'title' => 'Cart | RevoEnergy.',
+        return view('cart-produk.index')->with([
+            'title' => 'Cart Produk | RevoEnergy.',
         ]);
     }
     public function pengiriman(){
         return view('pengiriman.index')->with([
-            'title' => 'Cart | RevoEnergy.',
+            'title' => 'Pengiriman | RevoEnergy.',
         ]);
     }
 }

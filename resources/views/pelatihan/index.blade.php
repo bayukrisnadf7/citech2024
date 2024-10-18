@@ -143,7 +143,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+                        <p class="text-lg font-medium text-black">Rp. 1.200.000,00</p>
 
                         <div class="flex justify-between items-center mt-11">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
@@ -190,7 +190,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+                        <p class="text-lg font-medium text-black">Rp. 800.000,00</p>
 
                         <div class="flex justify-between items-center mt-4">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
@@ -235,7 +235,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+                        <p class="text-lg font-medium text-black">Rp. 900.000,00</p>
 
                         <div class="flex justify-between items-center mt-4">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
@@ -280,7 +280,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+                        <p class="text-lg font-medium text-black">Rp. 700.000,00</p>
 
                         <div class="flex justify-between items-center mt-4">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
@@ -324,7 +324,7 @@
                             </div>
                         </div>
 
-                        <p class="text-lg font-medium text-black">Rp. 1.100.000,00</p>
+                        <p class="text-lg font-medium text-black">Rp. 850.000,00</p>
 
                         <div class="flex justify-between items-center mt-4">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
@@ -421,8 +421,8 @@
     
                 localStorage.setItem('cartPelatihan', JSON.stringify(cartData));
     
-                alert('Item added to cart');
-                window.location.href = '/cart'; // Redirect to the cart page
+                alert('Pelatihan berhasil ditambahkan ke keranjang!');
+                window.location.href = '/cart-pelatihan'; // Redirect to the cart page
             }
     
             cartButtons.forEach(button => {
