@@ -40,7 +40,7 @@
                     4.9
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">100 Terjual | Baru</div>
             </div>
             </a>
             
@@ -61,7 +61,7 @@
                     4.8
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">80 Terjual | Baru</div>
             </div>
         </div>
         <div class="--card produk-jadi">
@@ -81,14 +81,13 @@
                     4.7
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">60 Terjual | Baru</div>
             </div>
         </div>
         <div class="--card produk-jadi">
             <div class="--images"><img src="{{ asset('img/produk4-home.png') }}"
                     class="w-full object-cover aspect-[1/1] rounded-[20px]" alt=""></div>
-            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">Electric Hoist 600 Kg - Katrol Elektrik
-                Takel Listrik PA600 Wire Reel
+            <div class="--heading text-[18px] font-medium line-clamp-2 mt-2">Genset Inverter 10 KVA 8 KW Tsuzumi TG10000SSI
             </div>
             <div class="--harga text-[24px] font-black mt-2 text-black">Rp. 1.388.888,00</div>
             <div class="--kategori-stok flex items-center gap-2 mt-2">
@@ -101,7 +100,7 @@
                     4.9
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">40 Terjual | Baru</div>
             </div>
         </div>
 
@@ -113,7 +112,7 @@
             <div class="--harga text-[24px] font-black mt-2 text-black">Rp. 220.000,00</div>
             <div class="--kategori-stok flex items-center gap-2 mt-2">
                 <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Mentah</div>
-                <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 100 Produk</div>
+                <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 20 Produk</div>
             </div>
             <div class="--rating-terjualdanulasan mt-2 flex items-center gap-2">
                 <div class="--rating text-[14px] font-bold">
@@ -121,7 +120,7 @@
                     4.9
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">20 Terjual | Baru</div>
             </div>
         </div>
         <div class="--card komponen-alat hidden">
@@ -132,7 +131,7 @@
             <div class="--harga text-[24px] font-black mt-2 text-black">Rp. 220.000,00</div>
             <div class="--kategori-stok flex items-center gap-2 mt-2">
                 <div class="--kategori py-2 px-4 bg-[#D1F16A] font-bold text-[12px] rounded-full">Produk Mentah</div>
-                <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 100 Produk</div>
+                <div class="--stok text-[12px] text-[#798092] font-medium">Stok: 20 Produk</div>
             </div>
             <div class="--rating-terjualdanulasan mt-2 flex items-center gap-2">
                 <div class="--rating text-[14px] font-bold">
@@ -140,7 +139,7 @@
                     4.9
                 </div>
                 <div class="--divider w-[1px] h-[15px] bg-[#798092]"></div>
-                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">564+ Terjual, 212 Ulasan</div>
+                <div class="--terjualdanulasan text-[14px] font-medium text-[#798092]">20 Terjual | Baru</div>
             </div>
         </div>
     </div>

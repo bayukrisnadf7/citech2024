@@ -356,7 +356,7 @@
             localStorage.setItem('cartProduct', JSON.stringify(productData));
 
             // Arahkan ke halaman keranjang
-            window.location.href = '/cart';
+            window.location.href = '/cart-produk';
         });
     </script>
 @endsection

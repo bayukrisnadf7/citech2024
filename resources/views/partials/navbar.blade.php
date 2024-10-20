@@ -25,14 +25,12 @@
             </li>
         </a>
         <a href="/artikel">
-            <li
-                class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('artikel') ? 'bg-white' : '' }}">
+            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('artikel') ? 'bg-white' : '' }}">
                 Artikel
             </li>
         </a>
-        <a href="/tentang">
-            <li
-                class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang') ? 'bg-white' : '' }}">
+        <a href="/tentang-kami">
+            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang-kami') ? 'bg-white' : '' }}">
                 Tentang
             </li>
         </a>
@@ -57,16 +55,43 @@
             </div>
             <span>Upgrade</span>
         </button>
-        <div class="--images flex items-center gap-2 cursor-pointer relative">
+        <div class="--images flex items-center gap-2 cursor-pointer relative" id="dropdownMenuButton">
             <div class="rounded-full overflow-hidden p-[2px] border-[2.5px] border-primary">
                 <div class="--bordered rounded-full">
-                    <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full"
-                        alt="">
+                    <img src="{{ asset('img/gungzzlee.jpg') }}" class="w-[40px] h-[40px] bg-cover rounded-full" alt="">
                 </div>
             </div>
             <div class="--icon">
                 <i class="bi bi-chevron-down text-[24px] font-bold"></i>
             </div>
         </div>
+
+        <!-- Dropdown menu -->
+        <div id="dropdownMenu" class="hidden absolute right-0 mt-40 w-48 bg-white rounded-lg shadow-lg z-10">
+            <ul class="py-2">
+                <li>
+                    <a href="/profile" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Profile</a>
+                </li>
+                <li>
+                    <a href="/logout" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Logout</a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
+
+<script>
+    const dropdownButton = document.getElementById('dropdownMenuButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    dropdownButton.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+
+    // Close dropdown if clicked outside
+    document.addEventListener('click', function(event) {
+        if (!dropdownButton.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+</script>

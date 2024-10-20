@@ -23,7 +23,7 @@
                             <i class="fa-solid fa-thumbs-up fa-lg"></i>
                             <p>30</p>
                             <i class="fa-regular fa-comment fa-lg"></i>
-                            <p>5 Komentar</p>
+                            <p>1 Komentar</p>
                         </div>
                         <div class="flex items-center text-secondary">
                             24 September 2024
@@ -124,11 +124,7 @@
                                     <p>Agung</p>
                                 </div>
                                 <div class="mt-2">
-                                    <p>Halo semua, saya tertarik untuk memasang panel surya di rumah saya sebagai alternatif
-                                        sumber listrik.
-                                        Apakah ada yang sudah punya pengalaman mengenai ini? Bagaimana efisiensinya untuk
-                                        kebutuhan listrik
-                                        sehari-hari, dan berapa lama pengembalian investasi dari biaya instalasi?</p>
+                                    <p>Artikel yang disajikan sangat membantu dan mengedukasi kita semua terkait pemanfaatan sampah menjadi energi</p>
                                 </div>
                                 <div class="flex items-center gap-5 mt-4">
                                     <div class="flex items-center text-slate-400 gap-2">

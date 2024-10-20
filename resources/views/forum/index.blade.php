@@ -2,15 +2,15 @@
 
 @section('content')
     <div class="flex items-center gap-28">
-        <button class="bg-secondary p-3 rounded-lg text-white w-56">Ajukan Pertanyaan</button>
+        <button onclick="showQuestionModal()" class="bg-secondary p-3 rounded-lg text-white w-56">Ajukan Pertanyaan</button>
         <div class="flex w-full gap-3">
             <div class="relative w-full">
                 <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
                 <input id="searchInput" type="text" placeholder="Cari Forum" class="border p-3 px-10 w-full rounded-lg">
             </div>
-            <select class="border rounded-md p-3">
-                <option>Terbaru</option>
-                <option>Terlama</option>
+            <select id="sortOptions" class="border rounded-md p-3">
+                <option value="terbaru">Terbaru</option>
+                <option value="terlama">Terlama</option>
             </select>
         </div>
     </div>
@@ -21,7 +21,7 @@
         <div class="w-3/4">
             <div class="flex flex-col gap-5">
                 <a href="/detail_forum">
-                    <div class="border w-full p-5 rounded-xl">
+                    <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                         <div class="flex gap-5">
                             <img src="img/foto.png" alt="" width="60" class="max-h-max">
                             <div class="flex flex-col">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -146,66 +146,97 @@
             <div class="border w-full p-5 rounded-xl">
                 <p>Tag</p>
                 <div class="grid grid-cols-3 gap-5 mt-3">
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#panelsurya</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#gogreen</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#infoterkini</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#renewables</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#cleanenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#solarpower</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#windenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#fossilfree</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#sustainable</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">biomassa</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">gogreen</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">infoterkini</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">renewables</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">cleanenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">solarpower</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">windenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">fossilfree</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">sustainable</p>
                 </div>
             </div>
         </div>
     </div>
-    <script>
-        // Ambil semua elemen dengan kelas 'tag'
-        const tags = document.querySelectorAll('.tag');
-        const searchInput = document.getElementById('searchInput');
+    <!-- Modal Structure -->
+    <div id="questionModal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden">
+        <div class="bg-white p-5 rounded-lg shadow-lg w-2/5">
+            <h2 class="text-lg font-semibold mb-4">Ajukan Pertanyaan</h2>
+            <div class="flex items-center mb-4">
+                <img src="img/foto.png" alt="User" class="w-12 h-12 rounded-full mr-4">
+                <textarea id="questionInput" placeholder="Tulis pertanyaan Anda di sini..."
+                    class="border p-3 rounded-lg w-full h-32"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="imageInput" class="block mb-2 text-sm font-medium text-gray-700">Unggah Gambar:</label>
+                <input type="file" id="imageInput" accept="image/*" class="border p-2 w-full" />
+            </div>
+            <div class="flex justify-end">
+                <button id="submitQuestion" class="bg-primary p-2 rounded-lg text-white">Kirim</button>
+                <button id="closeModal" class="bg-gray-300 p-2 rounded-lg ml-2">Tutup</button>
+            </div>
+        </div>
+    </div>
 
-        // Tambahkan event listener untuk setiap tag
-        tags.forEach(tag => {
-            tag.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent event bubbling
-                // Ambil teks tag yang diklik
-                const tagText = this.textContent.trim();
-                // Masukkan teks tag ke dalam input pencarian
-                searchInput.value = tagText;
-                filterForumPosts(); // Jalankan pencarian saat tag diklik
-            });
+    <script>
+        // Ambil elemen modal dan tombol
+        const questionModal = document.getElementById('questionModal');
+        const ajukanPertanyaanButton = document.querySelector('.bg-secondary');
+        const closeModalButton = document.getElementById('closeModal');
+        const submitQuestionButton = document.getElementById('submitQuestion');
+
+        // Event listener untuk tombol "Ajukan Pertanyaan"
+        ajukanPertanyaanButton.addEventListener('click', function() {
+            questionModal.classList.remove('hidden'); // Tampilkan modal
         });
 
-        // Ambil elemen input pencarian dan daftar forum
-        const forumPosts = document.querySelectorAll('.border'); // Select all forum posts
+        // Event listener untuk tombol "Tutup" di modal
+        closeModalButton.addEventListener('click', function() {
+            questionModal.classList.add('hidden'); // Sembunyikan modal
+        });
 
-        // Fungsi untuk menjalankan pencarian
-        function filterForumPosts() {
-            const query = searchInput.value.toLowerCase().trim();
-
-            // Loop melalui setiap forum post dan cek apakah sesuai dengan pencarian
+        // Event listener untuk tombol "Kirim" di modal
+        submitQuestionButton.addEventListener('click', function() {
+            const questionText = document.getElementById('questionInput').value;
+            // Proses pertanyaan (misalnya, kirim ke server atau simpan di local storage)
+            alert('Pertanyaan Anda: ' + questionText); // Ganti dengan logika yang sesuai
+            questionModal.classList.add('hidden'); // Sembunyikan modal setelah mengirim
+            document.getElementById('questionInput').value = ''; // Kosongkan input
+        });
+    </script>
+    <script>
+        // Fungsi untuk mencari forum berdasarkan kata kunci
+        function inputSearch() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const forumPosts = document.querySelectorAll('.forum-post'); // Hanya pilih elemen forum dengan class "forum-post"
+    
+            // Looping setiap forum post dan cek apakah teks sesuai dengan pencarian
             forumPosts.forEach(post => {
-                const postContent = post.querySelector('div.mt-4 p').textContent.toLowerCase(); // Get the content of each post
-                const postAuthor = post.querySelector('div.flex > p:first-child').textContent.toLowerCase(); // Get the author name
-
-                // Cek apakah query ada di dalam konten atau nama penulis
-                if (postContent.includes(query) || postAuthor.includes(query)) {
-                    post.style.display = 'block'; // Tampilkan post jika cocok
+                const postText = post.innerText.toLowerCase();
+                if (postText.includes(searchInput)) {
+                    post.style.display = 'block'; // Tampilkan jika cocok
                 } else {
-                    post.style.display = 'none'; // Sembunyikan post jika tidak cocok
+                    post.style.display = 'none'; // Sembunyikan jika tidak cocok
                 }
             });
         }
-
-        // Event listener untuk input pencarian (real-time)
-        searchInput.addEventListener('input', filterForumPosts);
-
-        // Tambahkan event listener untuk mendeteksi tombol "Enter"
-        searchInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Mencegah form submit jika ada
-                filterForumPosts(); // Jalankan pencarian
-            }
+    
+        // Tambahkan event listener ke input pencarian
+        document.getElementById('searchInput').addEventListener('input', inputSearch);
+    
+        // Event listener untuk klik tag
+        const tags = document.querySelectorAll('.tag');
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                const tagText = this.innerText; // Dapatkan teks dari tag yang diklik
+                document.getElementById('searchInput').value = tagText; // Masukkan teks tag ke dalam input pencarian
+                inputSearch(); // Lakukan pencarian otomatis berdasarkan tag
+            });
         });
     </script>
+    
+    
+    
+    
 @endsection
