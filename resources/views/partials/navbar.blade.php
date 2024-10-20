@@ -29,8 +29,8 @@
                 Artikel
             </li>
         </a>
-        <a href="/tentang">
-            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang') ? 'bg-white' : '' }}">
+        <a href="/tentang-kami">
+            <li class="hover:bg-white p-2 rounded-full w-28 text-center {{ request()->is('tentang-kami') ? 'bg-white' : '' }}">
                 Tentang
             </li>
         </a>

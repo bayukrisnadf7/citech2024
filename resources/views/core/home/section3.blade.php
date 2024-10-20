@@ -45,7 +45,7 @@
             <div class="--images-part1">
                 <img src="{{ asset('img/pelatihan/pelatihan2.png') }}"
                     class="w-full object-cover rounded-tl-[20px] rounded-tr-[20px]" alt="">
-                <div class="--judul text-[18px] font-medium line-clamp-2 mt-2 px-4">Pelatihan Instalasi Panel Surya
+                <div class="--judul text-[18px] font-medium line-clamp-2 mt-2 px-4">Pelatihan Desain Sistem Panel Surya Pemula
                 </div>
                 <div class="--description text-[14px] text-[#798092] line-clamp-2 px-4 mt-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya,
                     cara instalasi...</div>

@@ -177,7 +177,7 @@
                             <p
                                 class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75 mt-6">
                                 Backend Developer bertanggung jawab untuk membangun dan mengelola logika server, database,
-                                serta aplikasi untuk mendukung fungsi sisi server dari sebuah website atau aplikasi.
+                                serta aplikasi untuk mendukung fungsi sisi server dari sebuah website.
                             </p>
                         </div>
                     </div>
@@ -193,7 +193,7 @@
                             <div class="flex items-center justify-between mb-2">
                                 <p
                                     class="block font-sans text-[18px] font-bold text-base antialiased leading-relaxed text-blue-gray-900">
-                                    Bayu Prasetia
+                                    Bayu Krisna
                                 </p>
                                 <p
                                     class="block font-sans text-base antialiased font-medium leading-relaxed text-blue-gray-900 relative">
@@ -204,7 +204,7 @@
                             <p
                                 class="block font-sans text-sm antialiased font-normal leading-normal text-gray-700 opacity-75 mt-6">
                                 UI/UX Designer bertanggung jawab untuk membuat tampilan dan pengalaman pengguna yang
-                                intuitif, memastikan interaksi pengguna dengan produk mudah dipahami dan menyenangkan.</p>
+                                intuitif, memastikan interaksi pengguna dengan produk mudah dipahami.</p>
                             </p>
                         </div>
                     </div>

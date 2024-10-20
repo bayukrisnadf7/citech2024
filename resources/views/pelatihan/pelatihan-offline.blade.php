@@ -3,7 +3,7 @@
     <!-- Container -->
     <div class="container mx-auto flex gap-5 px-2 justify-center">
         <div class="w-2/3 p-4">
-            <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Desain Sistem Panel Surya</h1>
+            <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Desain Sistem Panel Surya Pemula</h1>
             <p class="mb-5 text-justify text-black">
                 Pelatihan ini dirancang untuk memberikan pemahaman mendalam mengenai desain dan implementasi sistem panel
                 surya,

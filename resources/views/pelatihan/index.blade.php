@@ -58,7 +58,7 @@
             <div class="flex justify-between items-center mb-6">
                 <div class="relative w-full">
                     <i class="fa-solid fa-magnifying-glass absolute top-4 left-3 text-slate-300"></i>
-                    <input type="text" placeholder="Cari pelatihan"
+                    <input id="search-bar" type="text" placeholder="Cari pelatihan"
                         class="border p-3 px-10 w-full rounded-lg border-[#E1E1E1]">
                 </div>
                 <p class="px-3">URUTKAN:</p>
@@ -123,7 +123,7 @@
                         class="w-full h-40 object-cover rounded-t-lg">
 
                     <div class="p-2">
-                        <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya</h3>
+                        <h3 class="text-lg font-semibold text-black mb-2">Pelatihan Desain Sistem Panel Surya Pemula</h3>
                         <p class="text-sm text-gray-400 mb-2">Kelas ini memberikan dasar-dasar teknis tentang panel surya,
                             cara instalasi...</p>
                         <p class="text-sm text-gray-400">Pengajar: <span class="font-normal text-black">Prof. Dr. Ir.
@@ -145,7 +145,7 @@
 
                         <p class="text-lg font-medium text-black">Rp. 1.200.000,00</p>
 
-                        <div class="flex justify-between items-center mt-11">
+                        <div class="flex justify-between items-center mt-4">
                             <div class="bg-[#D1F16A] px-3 py-0.5 rounded-full">
                                 <p class="text-sm text-black font-medium">Offline</p>
                             </div>
@@ -345,58 +345,43 @@
         </div>
 
     </div>
-
-    {{-- <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const levelRadios = document.querySelectorAll('input[name="level"]');
-            const categoryRadios = document.querySelectorAll('input[name="category"]');
-            const cards = document.querySelectorAll('.pelatihan-card');
-
-            function filterCards() {
-                const selectedLevel = Array.from(levelRadios).find(radio => radio.checked)?.id;
-                const selectedCategory = Array.from(categoryRadios).find(radio => radio.checked)?.id;
-
-                cards.forEach(card => {
-                    const cardLevel = card.getAttribute('data-level');
-                    const cardCategory = card.getAttribute('data-category');
-
-                    const levelMatch = selectedLevel === 'semua' || cardLevel === selectedLevel;
-                    const categoryMatch = selectedCategory === 'all' || cardCategory === selectedCategory;
-
-                    if (levelMatch && categoryMatch) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
-            }
-
-            levelRadios.forEach(radio => {
-                radio.addEventListener('change', filterCards);
-            });
-            categoryRadios.forEach(radio => {
-                radio.addEventListener('change', filterCards);
+    <script>
+        // Fungsi untuk filter berdasarkan pencarian
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase();
+            const pelatihanCards = document.querySelectorAll('.pelatihan-card'); // Ubah selektor ke .pelatihan-card
+    
+            pelatihanCards.forEach(function(card) {
+                const pelatihanTitle = card.querySelector('h3').innerText.toLowerCase(); // Cari di elemen judul
+    
+                // Periksa apakah judul pelatihan sesuai dengan input pencarian
+                if (pelatihanTitle.includes(searchValue)) {
+                    card.style.display = 'block'; // Tampilkan pelatihan jika cocok
+                } else {
+                    card.style.display = 'none'; // Sembunyikan pelatihan jika tidak cocok
+                }
             });
         });
-    </script> --}}
+    </script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const levelRadios = document.querySelectorAll('input[name="level"]');
             const categoryRadios = document.querySelectorAll('input[name="category"]');
             const cards = document.querySelectorAll('.pelatihan-card');
             const cartButtons = document.querySelectorAll('.pelatihan-card .shop-chart');
-    
+            const sortSelect = document.querySelector('select');
+
             function filterCards() {
                 const selectedLevel = Array.from(levelRadios).find(radio => radio.checked)?.id;
                 const selectedCategory = Array.from(categoryRadios).find(radio => radio.checked)?.id;
-    
+
                 cards.forEach(card => {
                     const cardLevel = card.getAttribute('data-level');
                     const cardCategory = card.getAttribute('data-category');
-    
+
                     const levelMatch = selectedLevel === 'semua' || cardLevel === selectedLevel;
                     const categoryMatch = selectedCategory === 'all' || cardCategory === selectedCategory;
-    
+
                     if (levelMatch && categoryMatch) {
                         card.style.display = 'block';
                     } else {
@@ -404,10 +389,10 @@
                     }
                 });
             }
-    
+
             function addToCart(event) {
                 event.preventDefault(); // Prevent default link behavior
-    
+
                 const card = event.target.closest('.pelatihan-card');
                 const name = card.querySelector('h3').innerText;
                 const price = card.querySelector('.text-lg.font-medium.text-black').innerText;
@@ -418,23 +403,48 @@
                     price: price,
                     image: imageUrl
                 };
-    
+
                 localStorage.setItem('cartPelatihan', JSON.stringify(cartData));
-    
+
                 alert('Pelatihan berhasil ditambahkan ke keranjang!');
                 window.location.href = '/cart-pelatihan'; // Redirect to the cart page
             }
-    
+
+            function sortCards() {
+                const sortOption = sortSelect.value;
+                const sortedCards = Array.from(cards);
+
+                sortedCards.sort((a, b) => {
+                    const priceA = parseFloat(a.querySelector('.text-lg.font-medium.text-black').innerText
+                        .replace(/[Rp.,]/g, ''));
+                    const priceB = parseFloat(b.querySelector('.text-lg.font-medium.text-black').innerText
+                        .replace(/[Rp.,]/g, ''));
+
+                    if (sortOption === 'Harga Terendah') {
+                        return priceA - priceB;
+                    } else if (sortOption === 'Harga Tertinggi') {
+                        return priceB - priceA;
+                    }
+                    return 0; // No sorting for "Terbaru" (default behavior)
+                });
+
+                const container = document.querySelector('.grid');
+                container.innerHTML = ''; // Clear the container before re-appending sorted cards
+                sortedCards.forEach(card => container.appendChild(card)); // Append sorted cards
+            }
+
             cartButtons.forEach(button => {
                 button.addEventListener('click', addToCart);
             });
-    
+
             levelRadios.forEach(radio => {
                 radio.addEventListener('change', filterCards);
             });
             categoryRadios.forEach(radio => {
                 radio.addEventListener('change', filterCards);
             });
+
+            sortSelect.addEventListener('change', sortCards); // Event listener for sorting
         });
     </script>
 @endsection

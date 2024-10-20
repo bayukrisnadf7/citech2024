@@ -21,7 +21,7 @@
         <div class="w-3/4">
             <div class="flex flex-col gap-5">
                 <a href="/detail_forum">
-                    <div class="border w-full p-5 rounded-xl">
+                    <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                         <div class="flex gap-5">
                             <img src="img/foto.png" alt="" width="60" class="max-h-max">
                             <div class="flex flex-col">
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                 </a>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -108,7 +108,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="border w-full p-5 rounded-xl">
+                <div class="border w-full p-5 rounded-xl forum-post" data-timestamp="1697654400000">
                     <div class="flex gap-5">
                         <img src="img/foto.png" alt="" width="60" class="max-h-max">
                         <div class="flex flex-col">
@@ -146,15 +146,15 @@
             <div class="border w-full p-5 rounded-xl">
                 <p>Tag</p>
                 <div class="grid grid-cols-3 gap-5 mt-3">
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#panelsurya</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#gogreen</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#infoterkini</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#renewables</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#cleanenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#solarpower</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#windenergy</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#fossilfree</p>
-                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">#sustainable</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">biomassa</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">gogreen</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">infoterkini</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">renewables</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">cleanenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">solarpower</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">windenergy</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">fossilfree</p>
+                    <p class="bg-slate-300 p-1 rounded-full cursor-pointer text-center tag">sustainable</p>
                 </div>
             </div>
         </div>
@@ -206,120 +206,37 @@
         });
     </script>
     <script>
-        // Ambil semua elemen dengan kelas 'tag'
-        const tags = document.querySelectorAll('.tag');
-        const searchInput = document.getElementById('searchInput');
-
-        // Tambahkan event listener untuk setiap tag
-        tags.forEach(tag => {
-            tag.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent event bubbling
-                // Ambil teks tag yang diklik
-                const tagText = this.textContent.trim();
-                // Masukkan teks tag ke dalam input pencarian
-                searchInput.value = tagText;
-                filterForumPosts(); // Jalankan pencarian saat tag diklik
-            });
-        });
-
-        // Ambil elemen input pencarian dan daftar forum
-        const forumPosts = document.querySelectorAll('.border'); // Select all forum posts
-
-        // Fungsi untuk menjalankan pencarian
-        function filterForumPosts() {
-            const query = searchInput.value.toLowerCase().trim();
-
-            // Loop melalui setiap forum post dan cek apakah sesuai dengan pencarian
+        // Fungsi untuk mencari forum berdasarkan kata kunci
+        function inputSearch() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const forumPosts = document.querySelectorAll('.forum-post'); // Hanya pilih elemen forum dengan class "forum-post"
+    
+            // Looping setiap forum post dan cek apakah teks sesuai dengan pencarian
             forumPosts.forEach(post => {
-                const postContent = post.querySelector('div.mt-4 p').textContent
-                    .toLowerCase(); // Get the content of each post
-                const postAuthor = post.querySelector('div.flex > p:first-child').textContent
-                    .toLowerCase(); // Get the author name
-
-                // Cek apakah query ada di dalam konten atau nama penulis
-                if (postContent.includes(query) || postAuthor.includes(query)) {
-                    post.style.display = 'block'; // Tampilkan post jika cocok
+                const postText = post.innerText.toLowerCase();
+                if (postText.includes(searchInput)) {
+                    post.style.display = 'block'; // Tampilkan jika cocok
                 } else {
-                    post.style.display = 'none'; // Sembunyikan post jika tidak cocok
+                    post.style.display = 'none'; // Sembunyikan jika tidak cocok
                 }
             });
         }
-
-        // Event listener untuk input pencarian (real-time)
-        searchInput.addEventListener('input', filterForumPosts);
-
-        // Tambahkan event listener untuk mendeteksi tombol "Enter"
-        searchInput.addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                event.preventDefault(); // Mencegah form submit jika ada
-                filterForumPosts(); // Jalankan pencarian
-            }
-        });
-
-        // Menambahkan event listener untuk tag klik
+    
+        // Tambahkan event listener ke input pencarian
+        document.getElementById('searchInput').addEventListener('input', inputSearch);
+    
+        // Event listener untuk klik tag
+        const tags = document.querySelectorAll('.tag');
         tags.forEach(tag => {
-            tag.addEventListener('click', function(event) {
-                event.stopPropagation(); // Prevent event bubbling
-                const tagText = this.textContent.trim();
-                searchInput.value = tagText; // Set the search input to the clicked tag
-                filterForumPosts(); // Run search based on the tag
+            tag.addEventListener('click', function() {
+                const tagText = this.innerText; // Dapatkan teks dari tag yang diklik
+                document.getElementById('searchInput').value = tagText; // Masukkan teks tag ke dalam input pencarian
+                inputSearch(); // Lakukan pencarian otomatis berdasarkan tag
             });
         });
     </script>
-    {{-- <script>
-        // Ambil elemen select untuk sorting
-        const sortOptions = document.getElementById('sortOptions');
-
-        // Tambahkan event listener untuk mendeteksi perubahan opsi sortir
-        sortOptions.addEventListener('change', function() {
-            const selectedOption = this.value;
-            sortForumPosts(selectedOption);
-        });
-        // Fungsi untuk menyortir forum posts
-        // Fungsi untuk menyortir forum posts
-        function sortForumPosts(order) {
-            const forumPostsArray = Array.from(forumPosts); // Ambil semua forum post sebagai array
-
-            // Urutkan berdasarkan waktu posting (dalam menit)
-            forumPostsArray.sort((a, b) => {
-                const timeA = extractPostTime(a);
-                const timeB = extractPostTime(b);
-
-                return order === 'terbaru' ? timeB - timeA : timeA - timeB; // Urutkan berdasarkan pilihan
-            });
-
-            // Re-attach posts yang sudah di-sort ke dalam DOM
-            const parentContainer = document.querySelector('.flex.flex-col.gap-5');
-            parentContainer.innerHTML = ''; // Kosongkan kontainer sebelum menambahkan elemen
-            forumPostsArray.forEach(post => parentContainer.appendChild(post));
-        }
-
-        // Fungsi untuk mengekstrak waktu dari elemen forum post
-        function extractPostTime(postElement) {
-            const timeTextElement = postElement.querySelector('.text-slate-300');
-            if (!timeTextElement) {
-                console.error("Time text element not found in post element:", postElement);
-                return 0; // Atau nilai default
-            }
-            const timeText = timeTextElement.textContent.trim();
-            let timeValue = 0;
-
-            // Ekstraksi waktu dari teks
-            const hourMatch = timeText.match(/(\d+)\s*jam/);
-            const minuteMatch = timeText.match(/(\d+)\s*menit/);
-            const secondMatch = timeText.match(/(\d+)\s*detik/);
-
-            if (hourMatch) {
-                timeValue += parseInt(hourMatch[1]) * 60; // Jam to menit
-            }
-            if (minuteMatch) {
-                timeValue += parseInt(minuteMatch[1]); // Menit
-            }
-            if (secondMatch) {
-                timeValue += parseInt(secondMatch[1]) / 60; // Detik to menit
-            }
-
-            return timeValue;
-        }
-    </script> --}}
+    
+    
+    
+    
 @endsection

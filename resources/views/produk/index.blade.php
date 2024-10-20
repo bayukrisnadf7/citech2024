@@ -98,7 +98,8 @@
                         </a>
                         <div class="flex justify-between">
                             <p></p>
-                            <i id="addToCart" class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full cursor-pointer"></i>
+                            <i id="addToCart"
+                                class="fa-solid fa-cart-shopping bg-slate-200 p-2 rounded-full cursor-pointer"></i>
                         </div>
                     </div>
                 </div>
@@ -311,6 +312,24 @@
 
     </div>
     <script>
+        // Fungsi untuk filter berdasarkan pencarian
+        document.getElementById('search-bar').addEventListener('input', function() {
+            const searchValue = this.value.toLowerCase();
+            const products = document.querySelectorAll('.product');
+
+            products.forEach(function(product) {
+                const productName = product.querySelector('p').innerText.toLowerCase();
+
+                // Periksa apakah nama produk sesuai dengan input pencarian
+                if (productName.includes(searchValue)) {
+                    product.style.display = 'block'; // Tampilkan produk jika cocok
+                } else {
+                    product.style.display = 'none'; // Sembunyikan produk jika tidak cocok
+                }
+            });
+        });
+    </script>
+    <script>
         document.querySelectorAll('input[type=radio]').forEach(function(radio) {
             radio.addEventListener('click', function() {
                 if (this.getAttribute('data-checked') === 'true') {
@@ -401,7 +420,7 @@
         document.getElementById('addToCart').addEventListener('click', function() {
             // Ambil elemen produk
             const productElement = this.closest('.product');
-    
+
             // Buat objek produk berdasarkan data yang ada
             const product = {
                 price: productElement.getAttribute('data-harga'),
@@ -410,13 +429,13 @@
                 quantity: 1,
                 subtotal: 220000
             };
-    
+
             // Simpan produk ke local storage
             localStorage.setItem('cartProduct', JSON.stringify(product));
-    
+
             // Tampilkan notifikasi atau pesan sukses
             alert('Produk berhasil ditambahkan ke keranjang!');
-    
+
             // Arahkan ke halaman /cart
             window.location.href = '/cart-produk';
         });

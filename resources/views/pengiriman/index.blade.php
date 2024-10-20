@@ -155,7 +155,8 @@
 
         // Event listener untuk tombol konfirmasi pembayaran
         document.getElementById('confirmPayment').addEventListener('click', function() {
-            alert('Pembayaran berhasil dikonfirmasi!');
+            alert('Pembayaran berhasil!');
+            window.location.href = '/produk';
             // Di sini Anda bisa menambahkan logika untuk mengalihkan pengguna ke halaman pembayaran yang sesuai
             document.getElementById('paymentModal').classList.add('hidden');
         });
@@ -173,13 +174,6 @@
             document.getElementById('summaryTotalPrice').innerText = '';
             document.getElementById('shippingCost').innerText = 'Rp. 0';
             alert('Produk berhasil dihapus dari keranjang.');
-        });
-    </script>
-    <script>
-        document.getElementById('confirmPayment').addEventListener('click', function() {
-            alert('Silahkan lanjut pada pembayaran!');
-            // Alihkan pengguna ke halaman /produk
-            window.location.href = '/produk';
         });
     </script>
 @endsection
