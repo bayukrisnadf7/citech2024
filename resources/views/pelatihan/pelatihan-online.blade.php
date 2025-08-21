@@ -1,8 +1,8 @@
 @extends('main')
 @section('content')
-    <!-- Container -->
-    <div class="container mx-auto flex gap-5 px-2 justify-center">
-        <div class="w-2/3 p-4">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-5 px-4 lg:px-2 justify-center">
+
+        <div class="w-full lg:w-2/3 p-4 mb-6 lg:mb-0">
             <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Energi Terbarukan untuk Pemula</h1>
             <p class="mb-5 text-justify text-black">
                 Kelas ini dirancang untuk memberikan pemahaman dasar mengenai energi terbarukan, konsep,
@@ -29,10 +29,8 @@
             </ul>
 
 
-            <!-- Materi Kelas -->
             <h2 class="text-lg font-semibold mb-2 text-black">Materi Pelatihan</h2>
             <div class="space-y-2 mb-5">
-                <!-- Modul 1 -->
                 <div class="border border-gray-300 rounded-lg p-4">
                     <div class="flex items-center justify-between cursor-pointer toggleArrow" data-materi-id="1">
                         <div class="flex mr-auto items-center space-x-3">
@@ -64,7 +62,6 @@
                     </ul>
                 </div>
 
-                <!-- Modul 2 -->
                 <div class="border border-gray-300 rounded-lg p-4">
                     <div class="flex items-center justify-between cursor-pointer toggleArrow" data-materi-id="2">
                         <div class="flex mr-auto items-center space-x-3">
@@ -104,7 +101,6 @@
                     </ul>
                 </div>
 
-                <!-- Modul 3 -->
                 <div class="border border-gray-300 rounded-lg p-4">
                     <div class="flex items-center justify-between cursor-pointer toggleArrow" data-materi-id="3">
                         <div class="flex mr-auto items-center space-x-3">
@@ -118,7 +114,6 @@
                     </div>
 
                     <ul class="space-y-2 px-10 py-3 text-gray-700 hidden" id="materiList3">
-                        <!-- Sub Modul 1 -->
                         <div class="flex items-center cursor-pointer playButton"
                             data-video-id="zL-H5FnZ9OU?si=1EThOd0a8YC2tsQw">
                             <img src="{{ asset('img/pelatihan/play-button.png') }}" class="w-auto h-5 mr-2">
@@ -128,7 +123,6 @@
                     </ul>
                 </div>
 
-                <!-- Modul 4 -->
                 <div class="border border-gray-300 rounded-lg p-4">
                     <div class="flex items-center justify-between cursor-pointer toggleArrow" data-materi-id="4">
                         <div class="flex mr-auto items-center space-x-3">
@@ -142,7 +136,6 @@
                     </div>
 
                     <ul class="space-y-2 px-10 py-3 text-gray-700 hidden" id="materiList4">
-                        <!-- Sub Modul 1 -->
                         <div class="flex items-center cursor-pointer playButton"
                             data-video-id="zL-H5FnZ9OU?si=1EThOd0a8YC2tsQw">
                             <img src="{{ asset('img/pelatihan/play-button.png') }}" class="w-auto h-5 mr-2">
@@ -153,7 +146,6 @@
                 </div>
 
 
-                <!-- Iframe Youtube -->
                 <div id="videoOverlay"
                     class="fixed inset-0 bg-black bg-no-repeat bg-opacity-70 flex items-center justify-center hidden">
                     <iframe class="rounded-xl" id="videoFrame" width="80%" height="80%" src=""
@@ -164,7 +156,7 @@
             </div>
         </div>
 
-        <div class="w-1/3 p-4">
+        <div class="w-full lg:w-1/3 p-4">
             <div class="bg-white rounded-lg shadow-md">
                 <div class="text-center mb-2">
                     <iframe class="w-full h-48 rounded-lg"
@@ -173,31 +165,27 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <!-- Mentor Section -->
                 <div class="px-2 py-5">
                     <h2 class="text-xl font-semibold mb-2 text-black">Mentor Pelatihan</h2>
                     <div class="flex items-center">
-                        <img src="https://via.placeholder.com/150" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
+                        <img src="{{ asset('img/profil.png') }}" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
                         <div class="flex-col">
                             <p class="text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</p>
                             <p class="text-gray-400 text-sm">Engineer Energi Terbarukan</p>
                         </div>
                     </div>
                 </div>
-                <button onclick="addToCartFromMentor(event)" class="mt-5 w-full font-medium bg-[#307B74] text-white py-4 rounded-lg cursor-pointer">Daftar Kelas</button>
+                <button onclick="addToCartFromMentor(event)"
+                    class="mt-5 w-full font-medium bg-[#307B74] text-white py-4 rounded-lg cursor-pointer">Daftar
+                    Kelas</button>
             </div>
-
         </div>
-
-
-
     </div>
 
     {{-- Ulasan User --}}
-    <div class="container mx-auto px-5 justify-center">
+    <div class="container mx-auto px-5 justify-center mt-10">
         <h2 class="text-lg font-semibold text-black">3 Komentar</h2>
-        <div class="flex"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 mt-4">
             <div class="border border-gray-300 rounded-lg p-4">
                 <div class="flex items-center space-x-2 mb-2">
                     <img src="{{ asset('img/pelatihan/user1.png') }}" class="w-auto h-10 rounded-full">
@@ -216,22 +204,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -257,22 +242,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -298,22 +280,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -322,7 +301,7 @@
             </div>
         </div>
     </div>
-    </div>
+    
     <div class="pelatihan-card bg-white rounded-lg shadow h-auto hidden" data-level="pemula" data-category="online">
         <img src="{{ asset('img/pelatihan/pelatihan3.png') }}" alt="Pelatihan Image"
             class="w-full h-40 object-cover rounded-t-lg">
@@ -368,21 +347,21 @@
     <script>
         function addToCartFromMentor(event) {
             event.preventDefault(); // Prevent default link behavior
-    
+
             // Directly access the specific mentor training data
             const name = "Pelatihan Energi Terbarukan untuk Pemula";
             const price = "Rp. 1.100.000,00";
-            const imageUrl = "img/pelatihan/pelatihan3.png"; // Replace with actual image URL if needed
-    
+            const imageUrl = "{{ asset('img/pelatihan/pelatihan3.png') }}"; // Use asset helper for correct path
+
             // Simpan sebagai satu objek, bukan array
             const cartData = {
                 name: name,
                 price: price,
                 image: imageUrl
             };
-    
+
             localStorage.setItem('cartPelatihan', JSON.stringify(cartData));
-    
+
             alert('Pelatihan berhasil ditambahkan ke keranjang!');
             window.location.href = '/cart-pelatihan'; // Redirect to the cart page
         }
@@ -396,14 +375,23 @@
         playButtons.forEach(button => {
             button.addEventListener("click", function() {
                 const videoId = this.getAttribute("data-video-id");
-                videoFrame.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1`;
+                videoFrame.src = `https://www.youtube.com/embed/${videoId}?enablejsapi=1&autoplay=1`;
                 videoOverlay.classList.remove("hidden");
             });
         });
 
         closeVideo.addEventListener("click", function() {
             videoOverlay.classList.add("hidden");
+            // Stop the video by resetting the src
             videoFrame.src = "";
+        });
+        
+        // Close video when clicking outside the iframe
+        videoOverlay.addEventListener('click', function(event) {
+            if (event.target === videoOverlay) {
+                videoOverlay.classList.add("hidden");
+                videoFrame.src = "";
+            }
         });
 
         const toggleArrows = document.querySelectorAll(".toggleArrow");
@@ -414,6 +402,7 @@
                 const materiList = document.getElementById(`materiList${materiId}`);
                 const arrowIcon = document.getElementById(`arrowIcon${materiId}`);
 
+                // Close all other accordions
                 toggleArrows.forEach(otherToggle => {
                     const otherId = otherToggle.getAttribute("data-materi-id");
                     if (otherId !== materiId) {
@@ -421,7 +410,8 @@
                         document.getElementById(`arrowIcon${otherId}`).classList.remove("rotate");
                     }
                 });
-
+                
+                // Toggle the clicked accordion
                 materiList.classList.toggle("hidden");
                 arrowIcon.classList.toggle("rotate");
             });

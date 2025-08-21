@@ -151,7 +151,7 @@
             <div class="px-2 py-5">
                 <h2 class="text-xl font-semibold mb-2 text-black">Mentor Pelatihan</h2>
                 <div class="flex items-center">
-                    <img src="https://via.placeholder.com/150" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
+                    <img src="{{ asset('img/profil.png') }}" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
                     <div class="flex-col">
                         <p class="text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</p>
                         <p class="text-gray-400 text-sm">Engineer Energi Terbarukan</p>

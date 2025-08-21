@@ -1,8 +1,7 @@
 @extends('main')
 @section('content')
-    <!-- Container -->
-    <div class="container mx-auto flex gap-5 px-2 justify-center">
-        <div class="w-2/3 p-4">
+    <div class="container mx-auto flex flex-col lg:flex-row gap-5 px-4 lg:px-2 justify-center">
+        <div class="w-full lg:w-2/3 p-4 mb-6 lg:mb-0">
             <h1 class="text-3xl font-semibold mb-2 text-black">Pelatihan Desain Sistem Panel Surya Pemula</h1>
             <p class="mb-5 text-justify text-black">
                 Pelatihan ini dirancang untuk memberikan pemahaman mendalam mengenai desain dan implementasi sistem panel
@@ -19,7 +18,7 @@
 
             <div class="mb-5">
                 <h2 class="text-lg font-semibold text-black">Silabus Pelatihan</h2>
-                <ul class="list-none -space-y-2 text-black">
+                <ul class="list-none space-y-2 text-black">
                     <li>
                         <p class="font-medium">1. Pengantar Teknologi Panel Surya</p>
                         <ul class="list-disc pl-8 space-y-1 text-black mb-5">
@@ -65,7 +64,7 @@
             </div>
         </div>
 
-        <div class="w-1/3 p-4">
+        <div class="w-full lg:w-1/3 p-4">
             <div class="bg-white rounded-lg shadow-md">
                 <div class="text-center mb-2">
                     <iframe class="w-full h-48 rounded-lg"
@@ -74,11 +73,10 @@
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
-                <!-- Mentor Section -->
                 <div class="px-2 py-5">
                     <h2 class="text-xl font-semibold mb-2 text-black">Mentor Pelatihan</h2>
                     <div class="flex items-center">
-                        <img src="https://via.placeholder.com/150" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
+                        <img src="{{ asset('img/profil.png') }}" alt="Mentor" class="rounded-full w-16 h-auto mr-2">
                         <div class="flex-col">
                             <p class="text-black">Prof. Dr. Ir. Ahmad Fajar, M.Eng</p>
                             <p class="text-gray-400 text-sm">Engineer Energi Terbarukan</p>
@@ -89,18 +87,13 @@
                     class="mt-5 w-full font-medium bg-[#307B74] text-white py-4 rounded-lg cursor-pointer shop-chart">Daftar
                     Kelas</button>
             </div>
-
         </div>
-
-
-
     </div>
 
     {{-- Ulasan User --}}
-    <div class="container mx-auto px-5 justify-center">
+    <div class="container mx-auto px-5 justify-center mt-10">
         <h2 class="text-lg font-semibold text-black">3 Komentar</h2>
-        <div class="flex"></div>
-        <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-3">
+        <div class="mt-4 grid grid-cols-1 lg:grid-cols-2 gap-3">
             <div class="border border-gray-300 rounded-lg p-4">
                 <div class="flex items-center space-x-2 mb-2">
                     <img src="{{ asset('img/pelatihan/user1.png') }}" class="w-auto h-10 rounded-full">
@@ -119,22 +112,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -160,22 +150,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -201,22 +188,19 @@
                     Penggunaan panel surya dan turbin angin dijelaskan dengan sangat baik. Sangat direkomendasikan untuk
                     siapa saja yang ingin terjun di bidang energi terbarukan!
                 </p>
-                <div class="flex space-x-3">
+                <div class="flex flex-wrap gap-x-3 gap-y-2">
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Suka</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-comment.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Komentar</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-share.png') }}" class="h-4 w-auto">
                         <p class="text-sm">25 Dibagikan</p>
                     </div>
-
                     <div class="flex space-x-1 items-center cursor-pointer">
                         <img src="{{ asset('img/pelatihan/icon-like.png') }}" class="h-4 w-auto">
                         <p class="text-sm">Laporkan</p>
@@ -225,5 +209,4 @@
             </div>
         </div>
     </div>
-    
 @endsection
